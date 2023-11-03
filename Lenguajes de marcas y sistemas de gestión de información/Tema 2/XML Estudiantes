@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<instituto>
+    <nombre>MEDAC Nevada</nombre>
+    <cicloformativo>Desarrollo de Aplicaciones Web</cicloformativo>
+      <modulos>
+        <modulo>
+            <nombre>Programación</nombre>
+            <horas>224</horas>
+            <alumnos>
+                <alumno>
+                    <nombre>Pepito Grillo</nombre>
+                    <nif>98765432H</nif>
+                    <telefono>656566555</telefono>
+                    <email>yhyhyahoocom</email>
+                    <direccion>
+                        <calle>El Pez 5</calle>
+                        <localidad>Suances</localidad>
+                        <codigopostal>39401</codigopostal>
+                    </direccion>
+                    <nota>apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Juan García Hernández</nombre>
+                    <nif>34543454F</nif>
+                    <telefono>600123123</telefono>
+                    <email>jgarciagmailcom</email>
+                    <direccion>
+                        <calle>Rodrigo de triana 5</calle>
+                        <localidad>Almería</localidad>
+                        <codigopostal>04005</codigopostal>
+                    </direccion>
+                    <nota>no apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Ana Fernández Gutiérrez</nombre>
+                    <nif>16965696L</nif>
+                    <telefono>789654321</telefono>
+                    <email>anafdezgtrrezhotmailcom</email>
+                    <direccion>
+                        <calle>C/ El Percebe, 13</calle>
+                        <localidad>Santander</localidad>
+                        <codigopostal>39302</codigopostal>
+                    </direccion>
+                </alumno>
+            </alumnos>
+        </modulo>
+                <modulo>
+            <nombre>Lenguaje de marcas</nombre>
+            <horas>128</horas>
+            <alumnos>
+                <alumno>
+                    <nombre>Pepito Grillo</nombre>
+                    <nif>98765432H</nif>
+                    <telefono>656566555</telefono>
+                    <email>yhyhyahoocom</email>
+                    <direccion>
+                        <calle>El Pez 5</calle>
+                        <localidad>Suances</localidad>
+                        <codigopostal>39401</codigopostal>
+                    </direccion>
+                    <nota>apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Juan García Hernández</nombre>
+                    <nif>34543454F</nif>
+                    <telefono>600123123</telefono>
+                    <email>jgarciagmailcom</email>
+                    <direccion>
+                        <calle>Rodrigo de triana 5</calle>
+                        <localidad>Almería</localidad>
+                        <codigopostal>04005</codigopostal>
+                    </direccion>
+                    <nota>no apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Ana Fernández Gutiérrez</nombre>
+                    <nif>16965696L</nif>
+                    <telefono>789654321</telefono>
+                    <email>anafdezgtrrezhotmailcom</email>
+                    <direccion>
+                        <calle>C/ El Percebe, 13</calle>
+                        <localidad>Santander</localidad>
+                        <codigopostal>39302</codigopostal>
+                    </direccion>
+                </alumno>
+            </alumnos>
+        </modulo>
+                <modulo>
+            <nombre>Sistemas informáticos</nombre>
+            <horas>192</horas>
+            <alumnos>
+                <alumno>
+                    <nombre>Pepito Grillo</nombre>
+                    <nif>98765432H</nif>
+                    <telefono>656566555</telefono>
+                    <email>yhyhyahoocom</email>
+                    <direccion>
+                        <calle>El Pez 5</calle>
+                        <localidad>Suances</localidad>
+                        <codigopostal>39401</codigopostal>
+                    </direccion>
+                    <nota>apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Juan García Hernández</nombre>
+                    <nif>34543454F</nif>
+                    <telefono>600123123</telefono>
+                    <email>jgarciagmailcom</email>
+                    <direccion>
+                        <calle>Rodrigo de triana 5</calle>
+                        <localidad>Almería</localidad>
+                        <codigopostal>04005</codigopostal>
+                    </direccion>
+                    <nota>no apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Ana Fernández Gutiérrez</nombre>
+                    <nif>16965696L</nif>
+                    <telefono>789654321</telefono>
+                    <email>anafdezgtrrezhotmailcom</email>
+                    <direccion>
+                        <calle>C/ El Percebe, 13</calle>
+                        <localidad>Santander</localidad>
+                        <codigopostal>39302</codigopostal>
+                    </direccion>
+                </alumno>
+            </alumnos>
+        </modulo>
+                <modulo>
+            <nombre>Base de datos</nombre>
+            <horas>192</horas>
+            <alumnos>
+                <alumno>
+                    <nombre>Pepito Grillo</nombre>
+                    <nif>98765432H</nif>
+                    <telefono>656566555</telefono>
+                    <email>yhyhyahoocom</email>
+                    <direccion>
+                        <calle>El Pez 5</calle>
+                        <localidad>Suances</localidad>
+                        <codigopostal>39401</codigopostal>
+                    </direccion>
+                    <nota>apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Juan García Hernández</nombre>
+                    <nif>34543454F</nif>
+                    <telefono>600123123</telefono>
+                    <email>jgarciagmailcom</email>
+                    <direccion>
+                        <calle>Rodrigo de triana 5</calle>
+                        <localidad>Almería</localidad>
+                        <codigopostal>04005</codigopostal>
+                    </direccion>
+                    <nota>no apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Ana Fernández Gutiérrez</nombre>
+                    <nif>16965696L</nif>
+                    <telefono>789654321</telefono>
+                    <email>anafdezgtrrezhotmailcom</email>
+                    <direccion>
+                        <calle>C/ El Percebe, 13</calle>
+                        <localidad>Santander</localidad>
+                        <codigopostal>39302</codigopostal>
+                    </direccion>
+                </alumno>
+            </alumnos>
+        </modulo>
+                <modulo>
+            <nombre>Entornos de desarrollo</nombre>
+            <horas>224</horas>
+            <alumnos>
+                <alumno>
+                    <nombre>Pepito Grillo</nombre>
+                    <nif>98765432H</nif>
+                    <telefono>656566555</telefono>
+                    <email>yhyhyahoocom</email>
+                    <direccion>
+                        <calle>El Pez 5</calle>
+                        <localidad>Suances</localidad>
+                        <codigopostal>39401</codigopostal>
+                    </direccion>
+                    <nota>apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Juan García Hernández</nombre>
+                    <nif>34543454F</nif>
+                    <telefono>600123123</telefono>
+                    <email>jgarciagmailcom</email>
+                    <direccion>
+                        <calle>Rodrigo de triana 5</calle>
+                        <localidad>Almería</localidad>
+                        <codigopostal>04005</codigopostal>
+                    </direccion>
+                    <nota>no apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Ana Fernández Gutiérrez</nombre>
+                    <nif>16965696L</nif>
+                    <telefono>789654321</telefono>
+                    <email>anafdezgtrrezhotmailcom</email>
+                    <direccion>
+                        <calle>C/ El Percebe, 13</calle>
+                        <localidad>Santander</localidad>
+                        <codigopostal>39302</codigopostal>
+                    </direccion>
+                </alumno>
+            </alumnos>
+        </modulo>
+                <modulo>
+            <nombre>Formación y orientación laboral</nombre>
+            <horas>224</horas>
+            <alumnos>
+                <alumno>
+                    <nombre>Pepito Grillo</nombre>
+                    <nif>98765432H</nif>
+                    <telefono>656566555</telefono>
+                    <email>yhyhyahoocom</email>
+                    <direccion>
+                        <calle>El Pez 5</calle>
+                        <localidad>Suances</localidad>
+                        <codigopostal>39401</codigopostal>
+                    </direccion>
+                    <nota>apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Juan García Hernández</nombre>
+                    <nif>34543454F</nif>
+                    <telefono>600123123</telefono>
+                    <email>jgarciagmailcom</email>
+                    <direccion>
+                        <calle>Rodrigo de triana 5</calle>
+                        <localidad>Almería</localidad>
+                        <codigopostal>04005</codigopostal>
+                    </direccion>
+                    <nota>no apto</nota>
+                    <faltasdeasistencia>0</faltasdeasistencia>
+                </alumno>
+                <alumno>
+                    <nombre>Ana Fernández Gutiérrez</nombre>
+                    <nif>16965696L</nif>
+                    <telefono>789654321</telefono>
+                    <email>anafdezgtrrezhotmailcom</email>
+                    <direccion>
+                        <calle>C/ El Percebe, 13</calle>
+                        <localidad>Santander</localidad>
+                        <codigopostal>39302</codigopostal>
+                    </direccion>
+                </alumno>
+            </alumnos>
+        </modulo>
+    </modulos>
+</instituto>

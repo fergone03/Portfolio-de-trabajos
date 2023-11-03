@@ -1,0 +1,21 @@
+.divalcachofas {
+    float: left; /* Establece el divalcachofas a la izquierda */
+    width: 60%; /* Asigna el 50% del ancho para ambos divs */
+  }
+  .divpaella {
+    float: right; /* Establece el divpaella a la derecha */
+    width: 40%; /* Asigna el 50% del ancho para ambos divs */
+  }
+  html {
+text-align: left;
+  }
+.contact {
+    clear: both;
+}
+h1 {
+    text-align: center;
+}
+.rayita {
+float: left ;
+width: 90%;
+}

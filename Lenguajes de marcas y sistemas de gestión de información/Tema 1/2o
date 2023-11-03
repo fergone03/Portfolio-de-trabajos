@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<empresa nombre="puente">
+  <dpto categoria="limpieza">
+    <responsable>
+      <dniresponsablelimp></dniresponsablelimp>
+      <direccionresponsablelimp></direccionresponsablelimp>
+    </responsable>
+  </dpto>
+  <dpto categoria="informatica">
+    <responsable>
+      <dniresponsableinformatica></dniresponsableinformatica>
+      <direccionresponsableinformatica></direccionresponsableinformatica>
+    </responsable>
+  </dpto>
+  <dpto categoria="cocina">
+    <responsable>
+      <dniresponsablecocina></dniresponsablecocina>
+      <direccionresponsablecocina></direccionresponsablecocina>
+    </responsable>
+   </dpto>
+</empresa>
