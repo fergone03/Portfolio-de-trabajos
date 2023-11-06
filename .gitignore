@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/Programación/Tema 4/build/
+/Programación/Tema 3/build/
