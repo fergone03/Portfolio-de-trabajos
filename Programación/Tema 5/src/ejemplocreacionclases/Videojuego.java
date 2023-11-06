@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ejemplocreacionclases;
 
-/**
- *
- * @author kekom
- */
 public class Videojuego {
        private int pegi;
        private double precio,nota;
