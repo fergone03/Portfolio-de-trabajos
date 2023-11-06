@@ -1,42 +1,95 @@
 @echo off
-chcp 65001 > nul
+
+:principio
 cls
-echo Este es el juego del 21
-echo ¿Quieres cartas?
-set /a "puntuacion=0"
+set cantjugador=0
+set numeromaximo=21
 
-set /p respuesta=
+echo Bienvenido al 21!
 
-if /i "%respuesta%"=="si" (
-    :buclejugador
-    set /a "carta=%random% %% 10 + 1"
-    echo Sacaste una carta con valor %carta%.
-    set /a "puntuacion+=carta"
-    echo Tu puntuación actual es: %puntuacion%
+:quierescartas
+echo Quieres cartas?
+set /p decision=Si/No :
 
-    if %puntuacion% gtr 21 (
-        echo ¡Te has pasado de 21! Has perdido.
-        goto fin
-    ) else (
-        echo ¿Quieres otra carta?
-        set /p respuesta=
-        if /i "%respuesta%"=="si" (
-            goto buclejugador
-        ) else if /i "%respuesta%"=="no" (
-            echo Has decidido no jugar. Tu puntuación es: %puntuacion%
-            goto fin
-        ) else (
-            echo Respuesta no válida. Debes responder "si" o "no".
-            goto fin
-        )
-    }
-) else if /i "%respuesta%"=="no" (
-    echo Has decidido no jugar. Tu puntuación es: %puntuacion%
-    goto fin
+if "%decision%" == "Si" (
+    goto darcartas
+) else if "%decision%" == "No" (
+    goto nomascartas
 ) else (
-    echo Respuesta no válida. Debes responder "si" o "no".
-    goto fin
+    echo Por favor pon "Si" o "No"
+    goto quierescartas
 )
 
-:fin
-echo Gracias por jugar. Tu puntuación final es: %puntuacion%
+:darcartas
+set /a "carta=%random% %% 10 + 1"
+echo La carta es %carta%
+set /a cantjugador+=carta
+set /a "resultadototal=cantjugador"
+echo Tu resultado es: %resultadototal%
+goto pedircartas
+
+:pedircartas
+if %resultadototal% leq %numeromaximo% (
+    goto quierescartas
+) else (
+    goto hasperdido
+)
+
+:hasperdido
+cls
+echo Has perdido!
+echo Quieres volver a jugar? Si/No
+set /p volver=
+
+if "%volver%" == "Si" (
+    goto principio
+) else (
+    exit
+)
+
+:nomascartas
+set numerosmaquina=0
+
+echo Te has quedado con %cantjugador%
+echo Turno de la maquina
+pause
+goto cartasdemaquina
+
+:cartasdemaquina
+set /a "cartamaquina=%random% %% 10 + 1"
+set /a "numerosmaquina+=cartamaquina"
+set /a "resultadototalmaquina=numerosmaquina"
+goto calculomaquina
+
+:maquinitapierde 
+echo La maquina saca %cartamaquina%
+echo Su puntuación es de %numerosmaquina%
+echo La maquina ha perdido!
+goto quieresvolverajugar
+
+:quieresvolverajugar
+pause
+cls
+echo Se ha acabado el juego 
+echo ¿Quieres volver a jugar?
+set /p Volver=Si/No
+
+if "%volver%" == "Si" (
+    cls
+    goto principio
+) else if "%volver%" == "No" (
+    exit
+) 
+
+:calculomaquina
+if %numerosmaquina% leq %cantjugador% (
+    echo La maquina saca %cartamaquina%
+    echo Ahora tiene %numerosmaquina%
+    goto cartasdemaquina
+) else if %numerosmaquina% gtr %numeromaximo% (
+    goto maquinitapierde
+) else if %numerosmaquina% gtr %cantjugador% (
+    echo La maquina tiene %numerosmaquina%
+    echo La maquina gana!
+    goto quieresvolverajugar
+)
