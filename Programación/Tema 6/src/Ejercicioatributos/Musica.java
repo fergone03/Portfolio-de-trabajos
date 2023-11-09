@@ -3,7 +3,7 @@ package Ejercicioatributos;
 public class Musica {
     private String genero, artista, fechaestreno;
     private int pista, bpm;
-    private double preciocd;
+    private float preciocd;
 
     public Musica() {
         genero = "";
@@ -14,7 +14,7 @@ public class Musica {
         preciocd = 0;
     }
 
-    public Musica(String genero, String artista, String fechaestreno, int pista, int bpm, double preciocd) {
+    public Musica(String genero, String artista, String fechaestreno, int pista, int bpm, float preciocd) {
         this.genero = genero;
         this.artista = artista;
         this.fechaestreno = fechaestreno;
@@ -67,7 +67,7 @@ public class Musica {
         return preciocd;
     }
 
-    public void setPreciocd(double preciocd) {
+    public void setPreciocd(float preciocd) {
         this.preciocd = preciocd;
     }
 

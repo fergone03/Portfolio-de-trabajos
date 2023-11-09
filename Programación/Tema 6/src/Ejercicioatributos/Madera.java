@@ -5,7 +5,7 @@ package Ejercicioatributos;
 public class Madera {
     private String tipo, corteza;
     private int edadarbol, anillos;
-    private double alturatotal;
+    private float alturatotal;
 
     public Madera() {
         tipo = "";
@@ -15,7 +15,7 @@ public class Madera {
         alturatotal = 0;
     }
 
-    public Madera(String tipo, String corteza, int edadarbol, int anillos, double alturatotal) {
+    public Madera(String tipo, String corteza, int edadarbol, int anillos, float alturatotal) {
         this.tipo = tipo;
         this.corteza = corteza;
         this.edadarbol = edadarbol;
@@ -59,7 +59,7 @@ public class Madera {
         return alturatotal;
     }
 
-    public void setAlturatotal(double alturatotal) {
+    public void setAlturatotal(float alturatotal) {
         this.alturatotal = alturatotal;
     }
 
