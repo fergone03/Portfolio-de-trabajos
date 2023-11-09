@@ -1,75 +1,76 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Ejercicioatributos;
 
-/**
- *
- * @author kekom
- */
+
 public class Madera {
- private String tipo,corteza;
-    private int edadarbol,anillos;
+    private String tipo, corteza;
+    private int edadarbol, anillos;
     private double alturatotal;
-    
-    public Madera (){
-     tipo="";
-    corteza ="";
-    edadarbol =0;
-    anillos =0;
-    alturatotal =0;
-   }
-   public String Getotipo() {
-      return tipo;
-   }
 
-   public void settipo() {
-      this.tipo = tipo;
-   }
+    public Madera() {
+        tipo = "";
+        corteza = "";
+        edadarbol = 0;
+        anillos = 0;
+        alturatotal = 0;
+    }
 
-   public String Getacorteza() {
-      return corteza;
-   }
+    public Madera(String tipo, String corteza, int edadarbol, int anillos, double alturatotal) {
+        this.tipo = tipo;
+        this.corteza = corteza;
+        this.edadarbol = edadarbol;
+        this.anillos = anillos;
+        this.alturatotal = alturatotal;
+    }
 
-   public void setcorteza() {
-      this.corteza = corteza;
-   }
+    public String getTipo() {
+        return tipo;
+    }
 
-   public int Getedadarbol() {
-      return edadarbol;
-   }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
-   public void Setedadarbol() {
-      this.edadarbol = edadarbol;
-   }
+    public String getCorteza() {
+        return corteza;
+    }
 
-   public int Getanillos() {
-      return anillos;
-   }
+    public void setCorteza(String corteza) {
+        this.corteza = corteza;
+    }
 
-   public void setanillos() {
-      this.anillos = anillos;
-   }
+    public int getEdadarbol() {
+        return edadarbol;
+    }
 
-   public double Gealturatotal() {
-      return alturatotal;
-   }
+    public void setEdadarbol(int edadarbol) {
+        this.edadarbol = edadarbol;
+    }
 
-   public void Setalturatotal() {
-      this.alturatotal = alturatotal;
-   }
+    public int getAnillos() {
+        return anillos;
+    }
 
- 
+    public void setAnillos(int anillos) {
+        this.anillos = anillos;
+    }
 
-  @Override
-public String toString() {
-    return "Madera{" +
-            "tipo=" + tipo +
-            ", corteza=" + corteza +  
-            ", edadarbol=" + edadarbol +
-            ", anillos=" + anillos +
-            ", alturatotal=" + alturatotal + 
-            '}';
-}
+    public double getAlturatotal() {
+        return alturatotal;
+    }
+
+    public void setAlturatotal(double alturatotal) {
+        this.alturatotal = alturatotal;
+    }
+
+    @Override
+    public String toString() {
+        return "Madera{" +
+                "tipo='" + tipo + '\'' +
+                ", corteza='" + corteza + '\'' +
+                ", edadarbol=" + edadarbol +
+                ", anillos=" + anillos +
+                ", alturatotal=" + alturatotal +
+                '}';
+    }
 }
