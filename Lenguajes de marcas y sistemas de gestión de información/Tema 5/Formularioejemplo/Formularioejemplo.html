@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head><meta charset="UTF-8" /></head>
+<body>
+    <img src="imgs/logo.png" alt="logo" />
+   
+    <form >
+        <fieldset>
+            <legend>Datos personales</legend>
+     <p> Nombre: <input type="text" value="Inserta tu nombre"></p>
+     <p> Edad: <input type="text" size="6"> Sexo: <input type="" readonly size="6" disabled ></p>
+     <textarea rows="2" cols="21" readonly>Esto es de solo lectura</textarea>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de interés</legend>
+        <p>¿Estás casado?<input type="radio" name="siono">Si <input type="radio" name="siono" checked>No</p>    
+    
+            <textarea rows="3" cols="50">Introduce tus comentarios</textarea>
+            <p>Deportes que practicas: <input type="checkbox" checked>Baloncesto<input type="checkbox">Fútbol<input type="checkbox" checked>Tenis</p>
+            <p>Elige tu equipo favorito <select>
+                <option>Atlético de Madrid</option>
+                <option>FC Barcelona</option>
+                <option>Real Madrid</option>  
+                <option>Granada CF</option>
+                <option>Espanyol</option>
+                <option>Almería</option>
+            </select>....<select>
+                <optgroup label="Madrid"></optgroup>
+                <option>Atlético de Madrid</option>
+                <option>Real Madrid</option>
+                <optgroup label="Cataluña"></optgroup>
+                <option>FC Barcelona</option>
+                <option>Espanyol</option>
+                <optgroup label="Andalucía"></optgroup>
+                <option>Granada CF</option>
+                <option>Almería</option>
+            </select></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ficheros a cargar</legend>
+            <p>Introduzca el primer archivo <input type="file"></p>
+            <p>Introduzca el segundo archivo <input type="file"></p>
+
+        </fieldset>
+
+        <input type="button" value="JAVA">
+        <input type="submit" value="enviar">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="resetear">
+        <input type="reset" value="Resetear">
+
+    </form>
+</body>
+</html>
