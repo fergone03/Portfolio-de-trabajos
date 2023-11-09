@@ -64,12 +64,19 @@ public class Musica {
       this.bpm = bpm;
    }
 
+     public double Getpreciocd() {
+      return preciocd;
+   }
+   public void preciocd() {
+      this.preciocd = preciocd;
+   }
+
 
    @Override
    public String toString() {
       return "Musica{" + "genero=" + genero + ", artista=" + artista
             + ", fechaestreno=" + fechaestreno + ", pista="
-            + pista + ", bpm=" + bpm + '}';
+            + pista + ", bpm=" + bpm +", preciocd=" + preciocd + '}';
    }
 
 }
