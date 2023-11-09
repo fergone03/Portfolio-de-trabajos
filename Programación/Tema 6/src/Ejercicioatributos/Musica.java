@@ -72,14 +72,9 @@ public class Musica {
     }
 
     @Override
-    public String toString() {
-        return "Musica{" +
-                "genero='" + genero + '\'' +
-                ", artista='" + artista + '\'' +
-                ", fechaestreno='" + fechaestreno + '\'' +
-                ", pista=" + pista +
-                ", bpm=" + bpm +
-                ", preciocd=" + preciocd +
-                '}';
-    }
+    public String toString(){
+        return"Madera{" + "artista=" + artista + ", fechaestreno=" + fechaestreno
+                    + ", pista=" + pista + ", bpm="
+                    + bpm + ", preciocd=" + preciocd +'}';
+        }
 }
