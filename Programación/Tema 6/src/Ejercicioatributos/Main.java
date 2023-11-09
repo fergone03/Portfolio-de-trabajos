@@ -14,11 +14,13 @@ public class Main {
         int cantidadDeAnillos = scanner.nextInt();
 
         Madera madera1 = new Madera(tipoDeMadera, "Lisa", 20, cantidadDeAnillos, 5.5f);
-        System.out.println("Detalles de la madera:");
-        System.out.println(tipoDeMadera);
+        System.out.println("Detalles de la madera:\nLa madera es de:"+ tipoDeMadera);
         int edadPorAnillos = madera1.calcularEdadPorAnillos();
         System.out.println("Edad del árbol según anillos: " + edadPorAnillos);
 
         madera1.imprimirDetallesEspecificos();
+
+        scanner.close();
+
     }
 }
