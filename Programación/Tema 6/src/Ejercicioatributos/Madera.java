@@ -1,24 +1,24 @@
 
 package Ejercicioatributos;
-
 public class Madera {
    private String tipo, corteza;
-   private int edadarbol, anillos;
-   private float alturatotal;
+   private int anillos;
+   private float alturatotal, edadarbol;
 
    public Madera() {
       tipo = "";
       corteza = "";
-      edadarbol = 0;
       anillos = 0;
+      edadarbol = anillos * 1.5f;  
       alturatotal = 0;
    }
 
-   public Madera(String tipo, String corteza, int edadarbol, int anillos, float alturatotal) {
+
+   public Madera(String tipo, String corteza,  int anillos, float alturatotal) {
       this.tipo = tipo;
       this.corteza = corteza;
-      this.edadarbol = edadarbol;
       this.anillos = anillos;
+      this.edadarbol = anillos * 1.5f;  
       this.alturatotal = alturatotal;
    }
 
@@ -43,11 +43,11 @@ public class Madera {
       this.corteza = corteza;
    }
 
-   public int getEdadarbol() {
+   public float getEdadarbol() {
       return edadarbol;
    }
 
-   public void setEdadarbol(int edadarbol) {
+   public void setEdadarbol(float edadarbol) {
       this.edadarbol = edadarbol;
    }
 
@@ -67,22 +67,17 @@ public class Madera {
       this.alturatotal = alturatotal;
    }
 
-   public int calcularEdadPorAnillos() {
-      return anillos;
-  } 
-  public void imprimirDetallesEspecificos() {
-   System.out.println("Detalles Específicos de la Madera:");
-   System.out.println("Tipo de madera: " + tipo);
-   System.out.println("Altura total: " + alturatotal);
+   public float calcularEdadPorAnillos() {
+      return edadarbol;
+     } 
+  public void MaderaMasVendida() {
+   System.out.println("La madera más vendidad es de " + tipo + " de corteza " + corteza + " tiene " + anillos + " anillos, por lo que tiene " + edadarbol +" años. El árbol medía " + alturatotal + " pies.");
 }
-   @Override
-   public String toString() {
-      return "Madera{" +
-            "tipo='" + tipo + '\'' +
-            ", corteza='" + corteza + '\'' +
-            ", edadarbol=" + edadarbol +
-            ", anillos=" + anillos +
-            ", alturatotal=" + alturatotal +
-            '}';
-   }
+
+@Override
+public String toString(){
+    return"Madera{" + "tipo=" + tipo + ", corteza=" + corteza
+                + ", anillos=" + anillos + ", edadarbol="
+                + edadarbol + ", alturatotal=" + alturatotal +'}';
+    }
 }

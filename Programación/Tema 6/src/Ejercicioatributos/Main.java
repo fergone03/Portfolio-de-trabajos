@@ -7,18 +7,22 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Ingrese el tipo de madera: ");
-        String tipoDeMadera = scanner.nextLine();
+        // 2 métodos personalizados de la clase Madera
+        Madera madera1 = new Madera("pino", "lisa", 20, 5.5f); 
 
-        System.out.print("Ingrese la cantidad de anillos: ");
-        int cantidadDeAnillos = scanner.nextInt();
+        madera1.MaderaMasVendida();
 
-        Madera madera1 = new Madera(tipoDeMadera, "Lisa", 20, cantidadDeAnillos, 5.5f);
-        System.out.println("Detalles de la madera:\nLa madera es de:"+ tipoDeMadera);
-        int edadPorAnillos = madera1.calcularEdadPorAnillos();
-        System.out.println("Edad del árbol según anillos: " + edadPorAnillos);
+        System.out.println("Indica cuantos anillos tiene tu madera:");
 
-        madera1.imprimirDetallesEspecificos();
+        int edadPorAnillos = scanner.nextInt();
+
+        Madera madera2 = new Madera("", "", edadPorAnillos, 0.0f);
+
+        System.out.println("Como tu madera tiene "+ edadPorAnillos +" anillos, tu madera tiene " + madera2.getEdadarbol() + " años.");
+
+        // 2 métodos personalizados de la clase Musica
+
+        // 2 métodos personalizados de la clase Carne
 
         scanner.close();
 
