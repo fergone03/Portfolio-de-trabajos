@@ -19,5 +19,57 @@ public class Madera {
     edadarbol =0;
     anillos =0;
     alturatotal =0;
-   }      
+   }
+   public String Getotipo() {
+      return tipo;
+   }
+
+   public void settipo() {
+      this.tipo = tipo;
+   }
+
+   public String Getacorteza() {
+      return corteza;
+   }
+
+   public void setcorteza() {
+      this.corteza = corteza;
+   }
+
+   public int Getedadarbol() {
+      return edadarbol;
+   }
+
+   public void Setedadarbol() {
+      this.edadarbol = edadarbol;
+   }
+
+   public int Getanillos() {
+      return anillos;
+   }
+
+   public void setanillos() {
+      this.anillos = anillos;
+   }
+
+   public double Gealturatotal() {
+      return alturatotal;
+   }
+
+   public void Setalturatotal() {
+      this.alturatotal = alturatotal;
+   }
+
+ 
+
+  @Override
+public String toString() {
+    return "Madera{" +
+            "tipo=" + tipo +
+            ", corteza=" + corteza +  
+            ", edadarbol=" + edadarbol +
+            ", anillos=" + anillos +
+            ", alturatotal=" + alturatotal + 
+            '}';
+}
 }
