@@ -69,10 +69,11 @@ public class Madera {
 
    public float calcularEdadPorAnillos() {
       return edadarbol;
-     } 
-  public void MaderaMasVendida() {
+   } 
+
+   public void MaderaMasVendida() {
    System.out.println("La madera más vendidad es de " + tipo + " de corteza " + corteza + " tiene " + anillos + " anillos, por lo que tiene " + edadarbol +" años. El árbol medía " + alturatotal + " pies.");
-}
+   }
 
 @Override
 public String toString(){
