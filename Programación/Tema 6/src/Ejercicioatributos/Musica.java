@@ -70,7 +70,9 @@ public class Musica {
     public void setPreciocd(float preciocd) {
         this.preciocd = preciocd;
     }
-
+    public void Vasporlapista(){
+        System.out.println("Vas por la pista " + pista + " de 12");
+    }
     @Override
     public String toString(){
         return"Madera{" + "artista=" + artista + ", fechaestreno=" + fechaestreno
