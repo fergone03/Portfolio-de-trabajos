@@ -6,16 +6,67 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String tipo, corteza;
+        int anillos;
+        float alturatotal, edadarbol;
+        //apartado 8a
+        Madera madera1 = new Madera();
 
-        Madera madera1 = new Madera("pino", "lisa", 20, 5.5f);
+        Carne carne1 = new Carne();
 
-        Carne carne1 = new Carne("Galicia", "12/7/2024", 23, 10.90f, 13.25f);
+        Musica musica1 = new Musica();
+        
+        
+        
+        System.out.println("Intrduce el tipo de arbol, tallaje de su corteza, cuantos anillos tiene el tronco, cuanto medía el árbol y finalmente sabrás su edad");
+        tipo = scanner.nextLine();
+        madera1.setTipo(tipo);
+        corteza = scanner.nextLine();
+        madera1.setCorteza(corteza);
+        anillos = scanner.nextInt();
+        madera1.setAnillos(anillos);
+        alturatotal = scanner.nextFloat();
+        madera1.setEdadarbol(alturatotal);
+        System.out.println(madera1);
 
-        Musica musica1 = new Musica("Pop", "Taylor Swift", "15/04/2012", 5, 120);
+        System.out.println("Intrduce el tipo de arbol, tallaje de su corteza, cuantos anillos tiene el tronco, cuanto medía el árbol y finalmente sabrás su edad");
+        madera1.setTipo(tipo);
+        madera1.setCorteza(corteza);
+        madera1.setAnillos(anillos);
+        madera1.setEdadarbol(alturatotal);
+        System.out.println(carne1);
+        
+        //apartado 8b
+        Madera madera2 = new Madera("pino", "lisa", 20, 5.5f);
+
+        Carne carne2 = new Carne("Galicia", "12/7/2024", 23, 10.90f, 13.25f);
+
+        Musica musica2= new Musica("Pop", "Taylor Swift", "15/04/2012", 5, 120);
+
+        System.out.println(madera2);
+
+        madera2.MaderaMasVendida();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // 2 métodos personalizados de la clase Madera
 
-        madera1.MaderaMasVendida();
+        /*madera1.MaderaMasVendida();
 
         System.out.println("Indica cuantos anillos tiene tu madera:");
 
@@ -51,7 +102,7 @@ public class Main {
 
         carne2.calidad();
 
-        scanner.close();
+        scanner.close();*/
 
     }
 }

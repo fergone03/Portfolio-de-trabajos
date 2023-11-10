@@ -61,9 +61,9 @@ public class Musica {
     public void setBpm(int bpm) {
         this.bpm = bpm;
     }
-
+ 
     public float getPreciocd() {
-        return preciocd = 3.5f * pista;
+        return preciocd;
 
     }
 
@@ -71,6 +71,10 @@ public class Musica {
         this.preciocd = preciocd;
     }
 
+    public float aumentarPrecio() {
+        return preciocd = 3.5f * pista;
+
+    }
     public void Vasporlapista() {
         System.out.println("Vas por la pista " + pista + " de 12, del álbum de " + artista + " de género " + genero
                 + ". Salió en " + fechaestreno + ".");
