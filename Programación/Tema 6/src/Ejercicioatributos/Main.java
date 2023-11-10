@@ -29,11 +29,11 @@ public class Main {
         madera1.setEdadarbol(alturatotal);
         System.out.println(madera1);
 
-        System.out.println("Intrduce el tipo de arbol, tallaje de su corteza, cuantos anillos tiene el tronco, cuanto medía el árbol y finalmente sabrás su edad");
-        madera1.setTipo(tipo);
-        madera1.setCorteza(corteza);
-        madera1.setAnillos(anillos);
-        madera1.setEdadarbol(alturatotal);
+        System.out.println("Este es el origen, fecha de caducidad, peso y precio kilo de la carne:");
+        carne1.setOrigen("Badalona");
+        carne1.setFechacaducidad("12/07/2024");
+        carne1.setPeso(13);
+        carne1.setPreciokilo(25);
         System.out.println(carne1);
         
         //apartado 8b
