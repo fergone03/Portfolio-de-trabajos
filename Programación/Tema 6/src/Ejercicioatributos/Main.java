@@ -45,7 +45,7 @@ public class Main {
         System.out.println(musica1);
 
         //apartado 8b
-        Madera madera2 = new Madera("pino", "lisa", 20, 5.5f);
+        Madera madera2 = new Madera("Pino", "Áspera", 57, 5.5f);
 
         Carne carne2 = new Carne("Galicia", "12/7/2024", 23, 10.90f, 13.25f);
 
