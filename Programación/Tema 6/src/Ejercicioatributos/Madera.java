@@ -62,13 +62,23 @@ public class Madera {
       this.alturatotal = alturatotal;
    }
 
-   public float calcularEdadPorAnillos() {
-      return edadarbol;
+   public float calcularAlturaPromedioPorAnillo() {
+      if (anillos != 0) {
+         return alturatotal / anillos;
+      } else {
+         System.out.println("No se puede calcular la altura promedio por anillo porque el número de anillos es cero.");
+         return 0;
+      }
    }
 
-   public void MaderaMasVendida() {
-      System.out.println("La madera más vendidad es de " + tipo + " de corteza " + corteza + " tiene " + anillos
-            + " anillos, por lo que tiene " + edadarbol + " años. El árbol medía " + alturatotal + " pies.");
+   public String TipoHoja() {
+      if (corteza==("lisa")) {
+         return "El árbol es de hoja perenne.";
+      } else if (corteza==("áspera")) {
+         return "El árbol es de hoja caduca.";
+      } else {
+         return "No se puede determinar el tipo de hoja del árbol.";
+      }
    }
 
    @Override

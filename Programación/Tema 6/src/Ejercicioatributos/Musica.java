@@ -71,17 +71,18 @@ public class Musica {
         this.preciocd = preciocd;
     }
 
-    public float aumentarPrecio() {
-        return preciocd = 3.5f * pista;
+    public void aumentarPrecio() {
+         preciocd = 3.5f * pista;
+        System.out.println("Como tu cd tiene " + pista + " cuesta " + preciocd + "€.");
 
     }
-    public void Vasporlapista() {
-        System.out.println("Vas por la pista " + pista + " de 12, del álbum de " + artista + " de género " + genero
-                + ". Salió en " + fechaestreno + ".");
-    }
-
-    public String PrecioPorXPistas() {
-        return "El CD que quieres comprar tiene " + pista + ", por lo que cuesta " + preciocd + " €.";
+   
+    public String velocidadMusica() {
+        if (bpm > 120) {
+            return "Este CD es rápido";
+        } else {
+            return "Este CD es lento";
+        }
     }
 
     @Override
