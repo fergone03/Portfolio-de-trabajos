@@ -10,8 +10,8 @@ package Ejercicioatributos;
  */
 public class Carne {
  private String origen,fechacaducidad;
-    private int porcentajegrasa,peso;
-    private double preciokilo;
+    private int peso;
+    private double preciokilo,porcentajegrasa;
     
     public Carne (){
     origen ="";
@@ -20,7 +20,7 @@ public class Carne {
     peso =0;
     preciokilo=0;
    }     
-       public Carne (String origen,String fechacaducidad,int porcentajegrasa,int peso,double preciokilo){
+       public Carne (String origen, String fechacaducidad, int peso, double porcentajegrasa, double preciokilo){
        this.origen = origen;
        this.fechacaducidad = fechacaducidad;
        this.porcentajegrasa = porcentajegrasa;
@@ -42,11 +42,11 @@ public class Carne {
        public void setFechacaducidad(String fechacaducidad){
            this.fechacaducidad = fechacaducidad;
        }
-              public void setPorcentajegrasa(int porcentajegrasa){
+              public void setPorcentajegrasa(double porcentajegrasa){
            this.porcentajegrasa = porcentajegrasa;
        
        }
-               public int getPorcentajegrasa() {
+               public double getPorcentajegrasa() {
            return porcentajegrasa;
        }
        
@@ -70,23 +70,31 @@ public class Carne {
        
         public void dosporuno(){
             if (peso> 20){
-                System.out.println("Has obtenido un bono de"+ peso+ "kilos al pasar de 20 kilos totales");
-                System.out.println("Ahora tienes"+ peso * 2 + "kilos");
+                System.out.println("Has obtenido un bono de "+ peso+ " kilos al pasar de 20 kilos totales. Ahora tienes " + peso * 2 + " kilos.");
             }
 
         }        
         public void calidad(){
-            if (porcentajegrasa<40){
-            System.out.println("la carne es de calidad saludable!");
+            if (porcentajegrasa>0 && porcentajegrasa < 10 ){
+            System.out.println("la carne es de calidad 0");
         } 
-            if (porcentajegrasa>40){
+           else if (porcentajegrasa>=10 && porcentajegrasa< 20 ){
+            System.out.println("la carne es de calidad 1");
+        } 
+          else  if (porcentajegrasa>=20 && porcentajegrasa< 30 ){
+            System.out.println("la carne es de calidad 2");
+        } 
+           else if (porcentajegrasa>=30 && porcentajegrasa< 40 ){
+            System.out.println("la carne es de calidad 3");
+        } 
+          else  if (porcentajegrasa>=40 && porcentajegrasa<50 ){
             System.out.println("la carne es de calidad 4");
         }
-            if (porcentajegrasa>50){
+         else   if (porcentajegrasa>=50 && porcentajegrasa<60){
                 System.out.println("la carne es de calidad 5");
             }
-           if (porcentajegrasa>60){
-                System.out.println("la carne es de calidad 6 o superior");
+           else {
+                System.out.println("la carne es de calidad 6 o superior estas comiendo cancer");
             }
         }
     @Override
