@@ -1,6 +1,13 @@
 
 package Ejercicioatributos;
 
+/**
+ *
+ * Clase madera que determina el tipo de hoja en base a la corteza y la altura promedio por anillos
+ *  @author Alejandro,Esteban
+ * version 1.0
+ */
+
 public class Madera {
    private String tipo, corteza;
    private int anillos;

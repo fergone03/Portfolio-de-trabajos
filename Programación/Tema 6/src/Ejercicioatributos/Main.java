@@ -2,7 +2,11 @@
 package Ejercicioatributos;
 
 import java.util.Scanner;
-
+/**
+ * Clase Main
+ *@version 1.0
+ * @author Alejandro,Esteban
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

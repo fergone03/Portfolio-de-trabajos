@@ -1,11 +1,20 @@
 
 package Ejercicioatributos;
 
+/**
+ *
+ * Clase carne que calcula el porcentaje de grasa y hace un dos por uno al llegar a un precio en concreto
+ *  @author Alejandro,Esteban
+ * version 1.0
+ */
 public class Carne {
     private String origen, fechacaducidad;
     private int peso;
     private float preciokilo, porcentajegrasa;
 
+    /**
+     *
+     */
     public Carne() {
         origen = "";
         fechacaducidad = "";
@@ -14,6 +23,14 @@ public class Carne {
         preciokilo = 0f;
     }
 
+    /**
+     *
+     * @param origen
+     * @param fechacaducidad
+     * @param peso
+     * @param porcentajegrasa
+     * @param preciokilo
+     */
     public Carne(String origen, String fechacaducidad, int peso, float porcentajegrasa, float preciokilo) {
         this.origen = origen;
         this.fechacaducidad = fechacaducidad;
@@ -22,49 +39,92 @@ public class Carne {
         this.preciokilo = preciokilo;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getOrigen() {
         return origen;
     }
 
+    /**
+     *
+     * @param origen
+     */
     public void setOrigen(String origen) {
         this.origen = origen;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getFechacaducidad() {
         return fechacaducidad;
     }
 
+    /**
+     *
+     * @param fechacaducidad
+     */
     public void setFechacaducidad(String fechacaducidad) {
         this.fechacaducidad = fechacaducidad;
     }
 
+    /**
+     *
+     * @param porcentajegrasa
+     */
     public void setPorcentajegrasa(float porcentajegrasa) {
         this.porcentajegrasa = porcentajegrasa;
 
     }
 
+    /**
+     *
+     * @return
+     */
     public float getPorcentajegrasa() {
         return porcentajegrasa;
     }
 
+    /**
+     *
+     * @param peso
+     */
     public void setPeso(int peso) {
         this.peso = peso;
 
     }
 
+    /**
+     *
+     * @return
+     */
     public float getPeso() {
         return peso;
     }
 
+    /**
+     *
+     * @param preciokilo
+     */
     public void setPreciokilo(float preciokilo) {
         this.preciokilo = preciokilo;
 
     }
 
+    /**
+     *
+     * @return
+     */
     public float getPreciokilo() {
         return preciokilo;
     }
 
+    /**
+     *
+     */
     public void dosporuno() {
         if (peso > 20) {
             System.out.println("Has obtenido un bono de " + peso + " kilos al pasar de 20 kilos totales. Ahora tienes "
@@ -73,6 +133,9 @@ public class Carne {
 
     }
 
+    /**
+     *
+     */
     public void calidad() {
         if (porcentajegrasa > 0 && porcentajegrasa < 10) {
             System.out.println("la carne es de calidad 0");
@@ -91,6 +154,10 @@ public class Carne {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Carne{" + "origen=" + origen + ", fechacaducidad=" + fechacaducidad

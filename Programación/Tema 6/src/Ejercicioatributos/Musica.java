@@ -1,5 +1,10 @@
 package Ejercicioatributos;
-
+/**
+ *
+ * Clase musica que calcula la velocidad en base a los bpm y calcula el prdel cd en base a su pista
+ *  @author Alejandro,Esteban
+ * version 1.0
+ */
 public class Musica {
     private String genero, artista, fechaestreno;
     private int pista, bpm;
