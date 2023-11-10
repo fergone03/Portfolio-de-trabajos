@@ -11,7 +11,7 @@ public class Main {
 
         Carne carne1 = new Carne("Galicia", "12/7/2024", 23, 10.90f, 13.25f);
 
-        Musica musica1 = new Musica("Pop", "Taylor Swift", "15/04/2012", 5, 120, 10);
+        Musica musica1 = new Musica("Pop", "Taylor Swift", "15/04/2012", 5, 120);
 
         // 2 métodos personalizados de la clase Madera
 
@@ -30,16 +30,18 @@ public class Main {
 
         musica1.Vasporlapista();
 
-        System.out.println("Indica cuantos anillos tiene tu madera:");
+        System.out.println("¿Cuántas pistas tiene el CD que quieres comprar?");
 
         int pistas = scanner.nextInt();
 
-        Musica musica2 = new Musica("", "", "", pistas, 0, 0);
+        Musica musica2 = new Musica("", "", "", pistas, 0);
 
         System.out.println("El CD que quieres comprar tiene " + pistas + ", por lo que cuesta " + musica2.getPreciocd()
                 + " €. Tu compra =" + musica2.PrecioPorXPistas());
 
         // 2 métodos personalizados de la clase Carne
+
+        carne1.dosporuno();
 
         System.out.println("Cuanto porcentaje de grasa tenia tu carne?");
 
@@ -48,8 +50,6 @@ public class Main {
         Carne carne2 = new Carne("", "", 0, porcentajegrasa, 0);
 
         carne2.calidad();
-
-        carne1.dosporuno();
 
         scanner.close();
 

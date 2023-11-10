@@ -11,16 +11,15 @@ public class Musica {
         fechaestreno = "";
         pista = 0;
         bpm = 0;
-        preciocd = 3.5f*pista;
+        preciocd = 0.0f;
     }
 
-    public Musica(String genero, String artista, String fechaestreno, int pista, int bpm, float preciocd) {
+    public Musica(String genero, String artista, String fechaestreno, int pista, int bpm) {
         this.genero = genero;
         this.artista = artista;
         this.fechaestreno = fechaestreno;
         this.pista = pista;
         this.bpm = bpm;
-        this.preciocd = preciocd;
     }
 
     public String getGenero() {
@@ -64,24 +63,27 @@ public class Musica {
     }
 
     public float getPreciocd() {
-        return preciocd;
+        return preciocd = 3.5f * pista;
+
     }
 
     public void setPreciocd(float preciocd) {
         this.preciocd = preciocd;
     }
 
-    public void Vasporlapista(){
-        System.out.println("Vas por la pista " + pista + " de 12, del álbum de " + artista + " de género " + genero + ". Salió en " + fechaestreno + ".");
+    public void Vasporlapista() {
+        System.out.println("Vas por la pista " + pista + " de 12, del álbum de " + artista + " de género " + genero
+                + ". Salió en " + fechaestreno + ".");
     }
 
-    public String  PrecioPorXPistas(){
+    public String PrecioPorXPistas() {
         return "El CD que quieres comprar tiene " + pista + ", por lo que cuesta " + preciocd + " €.";
     }
+
     @Override
-    public String toString(){
-        return"Musica{" + "genero=" + genero + "artista=" + artista + ", fechaestreno=" + fechaestreno
-                    + ", pista=" + pista + ", bpm="
-                    + bpm + ", preciocd=" + preciocd +'}';
-        }
+    public String toString() {
+        return "Musica{" + "genero=" + genero + "artista=" + artista + ", fechaestreno=" + fechaestreno
+                + ", pista=" + pista + ", bpm="
+                + bpm + ", preciocd=" + preciocd + '}';
+    }
 }
