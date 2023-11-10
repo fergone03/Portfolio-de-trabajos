@@ -1,5 +1,13 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package Ejercicioatributos;
 
+/**
+ *
+ * @author kekom
+ */
 public class Carne {
  private String origen,fechacaducidad;
     private int porcentajegrasa,peso;
@@ -19,47 +27,68 @@ public class Carne {
        this.peso = peso;
        this.preciokilo = preciokilo;
        }
-       public String Getorigen() {
+       public String getOrigen() {
            return origen;
        }
        
-       public void setorigen(){
+       public void setOrigen(String origen){
            this.origen = origen;
        }
        
-        public String Getfechacaducidad() {
+        public String getFechacaducidad() {
            return fechacaducidad;
        }
        
-       public void setfechacaducidad(){
+       public void setFechacaducidad(String fechacaducidad){
            this.fechacaducidad = fechacaducidad;
        }
-              public void Setporcentajegrasa(){
+              public void setPorcentajegrasa(int porcentajegrasa){
            this.porcentajegrasa = porcentajegrasa;
        
        }
-               public int Getporcentajegrasa() {
+               public int getPorcentajegrasa() {
            return porcentajegrasa;
        }
        
-       public void setpeso(){
+       public void setPeso(int peso){
            this.peso = peso;
        
        }
        
-        public int Getpeso() {
+        public double getPeso() {
            return peso;
        }
        
-       public void setpreciokilo(){
+       public void setPreciokilo(double preciokilo){
            this.preciokilo = preciokilo;
        
        }
        
-        public double Getpreciokilo() {
+        public double getPreciokilo() {
            return preciokilo;
        }
        
+        public void dosporuno(){
+            if (peso> 20){
+                System.out.println("Has obtenido un bono de"+ peso+ "kilos al pasar de 20 kilos totales");
+                System.out.println("Ahora tienes"+ peso * 2 + "kilos");
+            }
+
+        }        
+        public void calidad(){
+            if (porcentajegrasa<40){
+            System.out.println("la carne es de calidad saludable!");
+        } 
+            if (porcentajegrasa>40){
+            System.out.println("la carne es de calidad 4");
+        }
+            if (porcentajegrasa>50){
+                System.out.println("la carne es de calidad 5");
+            }
+           if (porcentajegrasa>60){
+                System.out.println("la carne es de calidad 6 o superior");
+            }
+        }
     @Override
     public String toString(){
         return"Carne{" + "origen=" + origen + ", fechacaducidad=" + fechacaducidad
