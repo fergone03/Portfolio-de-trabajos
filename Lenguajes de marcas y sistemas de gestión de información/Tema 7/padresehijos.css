@@ -1,0 +1,8 @@
+*{COLOR:blue}
+p {text-align:center}
+.miclase{border:1px dotted red}
+#miidentificador {background-color:chocolate}
+ul,h1{background-color:red}
+p>a{background-color:yellow}
+div+p{border:solid gray 2px;}
+p[lang="en"] {background-color: green;}
