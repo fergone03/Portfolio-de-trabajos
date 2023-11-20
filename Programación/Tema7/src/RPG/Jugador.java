@@ -5,7 +5,7 @@ import java.util.Random;
 
 /**
  *
- * @author kekom
+ * @author Esteban y Alex Castillo
  */
 public class Jugador {
     private String Nombre;
