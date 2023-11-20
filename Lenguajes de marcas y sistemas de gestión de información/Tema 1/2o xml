@@ -1,48 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<datos>
-  <contacto> 
-    <nombre>Paco</nombre>
-    <apellidos>Torreón Gómez</apellidos>
-    <correo>paquitopro@gmail.com</correo>
-    <telefono >
-        <fijo>5664645664</fijo>
-        <movil>657435733</movil>
-    </telefono>
-  </contacto>
-  <contacto> 
-    <nombre>Nono</nombre>
-    <apellidos>Ponce Ortíñez</apellidos>
-    <correo>sunono23@gmail.es</correo>
-    <telefono >
-        <fijo>74276847623652</fijo>
-        <movil>754397353</movil>
-    </telefono>
-  </contacto>
-    <contacto> 
-    <nombre>Juanfran</nombre>
-    <apellidos>Marisco Percebesa</apellidos>
-    <correo>fumarola85@gmail.com</correo>
-    <telefono >
-        <fijo>84278789</fijo>
-        <movil>7464645643</movil>
-    </telefono>
-  </contacto>
-     <contacto> 
-    <nombre>Miguel</nombre>
-    <apellidos>Bombo Roquetas</apellidos>
-    <correo>crocomoco90@gmail.com</correo>
-    <telefono >
-        <fijo>65336663</fijo>
-        <movil>25525522333</movil>
-    </telefono>
-  </contacto>
-     <contacto> 
-    <nombre>Secesión</nombre>
-    <apellidos>Santa De La Rica</apellidos>
-    <correo>bambamboin443@gmail.com</correo>
-    <telefono >
-        <fijo>242343253543</fijo>
-        <movil>76757657567</movil>
-    </telefono>
-  </contacto>
-</datos>
+<empresa nombre="puente">
+  <dpto categoria="limpieza">
+    <responsable>
+      <dniresponsablelimp></dniresponsablelimp>
+      <direccionresponsablelimp></direccionresponsablelimp>
+    </responsable>
+  </dpto>
+  <dpto categoria="informatica">
+    <responsable>
+      <dniresponsableinformatica></dniresponsableinformatica>
+      <direccionresponsableinformatica></direccionresponsableinformatica>
+    </responsable>
+  </dpto>
+  <dpto categoria="cocina">
+    <responsable>
+      <dniresponsablecocina></dniresponsablecocina>
+      <direccionresponsablecocina></direccionresponsablecocina>
+    </responsable>
+   </dpto>
+</empresa>
