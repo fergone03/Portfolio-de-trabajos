@@ -8,9 +8,9 @@ package Ejercicioatributos;
  * version 1.0
  */
 public class Carne {
-    private String origen, fechacaducidad;
+    private String origen, fecha_caducidad;
     private int peso;
-    private float preciokilo, porcentajegrasa;
+    private float preciokilo, porcentaje_grasa;
 
     /**
      *

@@ -1,0 +1,18 @@
+header {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px; /* Radio de los bordes para hacerlos redondos */
+  overflow: hidden;
+}
+.formhead {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.head3r {
+  float: left;
+  margin-left: 20px;
+  display: flex;
+}
+.allhead {
+  width: 100%;
+}
