@@ -1,6 +1,7 @@
 
 package RPG;
 
+import java.lang.Math;
 import java.util.Random;
 
 /**
@@ -52,10 +53,12 @@ public class Jugador {
         Dinero = dinero;
     }
 
-    public void calcularFuerzaInicial() {
-        Random random = new Random();
-        this.PuntosAtaque = random.nextInt(10) + 1;
-    }
+public int calcularFuerzaInicial() {
+    Random random = new Random();
+    this.PuntosAtaque = random.nextInt(10) + 1;
+    return this.PuntosAtaque;
+}
+
 
     @Override
     public String toString() {
