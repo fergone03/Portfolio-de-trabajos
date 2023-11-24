@@ -19,6 +19,7 @@ public class Jugador {
         this.PuntosSalud = 10;
         this.PuntosAtaque = 0;
         this.Dinero = 2;
+
     }
 
     public String getNombre() {
@@ -54,11 +55,12 @@ public class Jugador {
         Dinero = dinero;
     }
 
-public int calcularFuerzaInicial() {
-    Random random = new Random();
-    this.PuntosAtaque = random.nextInt(10) + 1;
-    return this.PuntosAtaque;
-}
+    public int calcularFuerzaInicial() {
+        Random random = new Random();
+        this.PuntosAtaque = random.nextInt(10) + 1;
+        return this.PuntosAtaque;
+    }
+
 
 
     @Override

@@ -21,7 +21,7 @@ public class Main {
         while (true) {
 
             System.out.println(
-                    "En un continente y año desconocido se hallaba un renegado de medac. Este fue expulsado del panteón de los dioses de la programación por osar no poner tabulación en el código.");
+                    "En un continente y año desconocido se hallaba un renegado de medac. \nEste fue expulsado del panteón de los dioses de la programación por osar no poner tabulación en el código.");
             System.out.println(
                     "Su deber es demostrar no ser merecedor de tal exilio y desprestigio, y lo probará con los puños");
             System.out.print("Ingresa tu nombre: ");
