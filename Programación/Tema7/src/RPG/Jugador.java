@@ -54,16 +54,16 @@ public class Jugador {
 
     public void calcularFuerzaInicial() {
         Random random = new Random();
-        this.puntosAtaque = random.nextInt(10) + 1;
+        this.PuntosAtaque = random.nextInt(10) + 1;
     }
 
     @Override
     public String toString() {
         return "Jugador{" +
-                "nombre='" + nombre + '\'' +
-                ", puntosSalud=" + puntosSalud +
-                ", puntosAtaque=" + puntosAtaque +
-                ", dinero=" + dinero +
+                "nombre='" + Nombre + '\'' +
+                ", puntosSalud=" + PuntosSalud +
+                ", puntosAtaque=" + PuntosAtaque +
+                ", dinero=" + Dinero +
                 '}';
 
     }
