@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package RPG;
+
 import java.lang.Math;
 import java.util.Random;
 
@@ -18,7 +19,6 @@ public class Enemigo {
     public Enemigo() {
         nombre = "";
         puntos_ataque = 0;
-
     }
 
     public void setNombre(String nombre) {
@@ -33,19 +33,14 @@ public class Enemigo {
         return nombre;
     }
 
-    public int getPuntosAtaque() {
-        return puntos_ataque;
+    public int calcularFuerzaEnemigo() {
+        Random random = new Random();
+        this.puntos_ataque = random.nextInt(10) + 1;
+        return this.puntos_ataque;
     }
-    
-    public void calcularFuerzaEnemigo () {
-            Random random = new Random();
-            this.fuerzaenemigo = random.nextInt(10) + 1;
-            return this.fuerzaenemigo;
+
+    public int soltarOro() {
+        Random random = new Random();
+        return random.nextInt(10) + 1;
     }
-        public void soltarOro () {
-            Random random = new Random();
-            this.orosoltado = random.nextInt(10) + 1;
-            return this.orosoltado;
-    }
-        
 }
