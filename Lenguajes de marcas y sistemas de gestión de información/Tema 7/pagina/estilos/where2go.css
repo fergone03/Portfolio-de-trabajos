@@ -1,30 +1,61 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
 header {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .formhead {
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-  }
-  .head3r {
-    float: left;
-    margin-left: 20px;
-    display: flex;
-  }
-  .allhead {
-    width: 100%;
-  }
-  
-  .asides {
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    margin-left: -25px;
-    width: 185px;
-    height: 150px;
-  }
-  footer {
-    text-align: center;
-  }
-  
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.formhead {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.head3r {
+  float: left;
+  margin-left: 20px;
+  display: flex;
+}
+.allhead {
+  width: 100%;
+}
+.asides {
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  width: 210px;
+
+  height: 140px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.asides1 {
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  width: 210px;
+  height: 150px;
+  justify-content: center;
+  gap: 10px;
+}
+aside {
+  float: left;
+  width: 251px;
+  margin-left: -25px;
+}
+main {
+  text-align: center;
+  float: right;
+  width: calc(100% - 251px);
+}
+
+footer {
+  text-align: center;
+
+  bottom: 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
