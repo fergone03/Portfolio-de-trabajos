@@ -4,6 +4,8 @@
  */
 package RPG;
 import java.lang.Math;
+import java.util.Random;
+
 /**
  *
  * @author kekom
@@ -36,10 +38,14 @@ public class Enemigo {
     }
     
     public void calcularFuerzaEnemigo () {
-        int random =(int) (Math.random()*10);
+            Random random = new Random();
+            this.fuerzaenemigo = random.nextInt(10) + 1;
+            return this.fuerzaenemigo;
     }
         public void soltarOro () {
-        int random =(int) (Math.random()*100);
+            Random random = new Random();
+            this.orosoltado = random.nextInt(10) + 1;
+            return this.orosoltado;
     }
         
 }

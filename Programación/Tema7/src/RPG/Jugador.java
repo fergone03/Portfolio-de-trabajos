@@ -42,7 +42,8 @@ public class Jugador {
     }
 
     public void setPuntosAtaque(int puntosAtaque) {
-        PuntosAtaque = puntosAtaque;
+        this.PuntosAtaque = puntosAtaque;
+
     }
 
     public int getDinero() {
