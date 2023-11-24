@@ -16,7 +16,7 @@ public class Jugador {
 
     public Jugador(String Nombre) {
         this.Nombre = Nombre;
-        this.PuntosSalud = 20;
+        this.PuntosSalud = 10;
         this.PuntosAtaque = 0;
         this.Dinero = 2;
     }

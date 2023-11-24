@@ -8,8 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Jugador jugador1 = new Jugador("Paco");
         Enemigo enemigo = new Enemigo();
-
-        int fuerzaActualJefe = enemigo.calcularFuerzaEnemigo();
+        Boolean cambiarfuerza = true;
         String[] jefes;
         Scanner scanner = new Scanner(System.in);
 
@@ -19,38 +18,43 @@ public class Main {
         jefes[2] = "Dios Jose";
         jefes[3] = "Renegada MariaJose";
         jefes[4] = "Ultradios Marcos";
+        while (true) {
 
-        System.out.println(
-                "En un continente y año desconocido se hallaba un renegado de medac. Este fue expulsado del panteón de los dioses de la programación por osar no poner tabulación en el código.");
-        System.out.println(
-                "Su deber es demostrar no ser merecedor de tal exilio y desprestigio, y lo probará con los puños");
-        System.out.print("Ingresa tu nombre: ");
-        String nombreJugador = scanner.nextLine();
-        System.out.println("Hola, " + nombreJugador + "!");
-        int fuerzaInicial = jugador1.calcularFuerzaInicial();
-        System.out.println("Tu fuerza inicial es: " + fuerzaInicial);
-        System.out.println("Empiezas con 2 duros que has encontrado en el suelo como dinero inicial");
+            System.out.println(
+                    "En un continente y año desconocido se hallaba un renegado de medac. Este fue expulsado del panteón de los dioses de la programación por osar no poner tabulación en el código.");
+            System.out.println(
+                    "Su deber es demostrar no ser merecedor de tal exilio y desprestigio, y lo probará con los puños");
+            System.out.print("Ingresa tu nombre: ");
+            String nombreJugador = scanner.nextLine();
+            System.out.println("Hola, " + nombreJugador + "!");
+            int fuerzaInicial = jugador1.calcularFuerzaInicial();
+            System.out.println("Tu fuerza inicial es: " + fuerzaInicial);
+            System.out.println("Empiezas con 2 duros que has encontrado en el suelo como dinero inicial");
 
-        while (jugador1.getDinero() > 0) {
-            System.out.println("¿Quieres cambiar tu fuerza por 1 oro? (s/n)");
-            String respuesta = scanner.nextLine();
+            while (cambiarfuerza == true) {
+                System.out.println("¿Quieres cambiar tu fuerza por 1 oro? (s/n)");
+                String respuesta = scanner.nextLine();
 
-            int nuevoValorFuerza = jugador1.calcularFuerzaInicial();
-
-            if (respuesta.equals("s")) {
-                jugador1.setDinero(jugador1.getDinero() - 1);
-                System.out.println("Tu nueva fuerza es: " + nuevoValorFuerza);
-            } else if (respuesta.equals("n")) {
-                System.out.println("Te quedas con tu fuerza actual.");
-            } else {
-                System.out.println("¡s/n!");
+                if (respuesta.equals("s") && jugador1.getDinero() > 0) {
+                    int nuevoValorFuerza = jugador1.calcularFuerzaInicial();
+                    jugador1.setDinero(jugador1.getDinero() - 1);
+                    System.out.println("Tu nueva fuerza es: " + nuevoValorFuerza);
+                } else if (respuesta.equals("s") && jugador1.getDinero() <= 0) {
+                    cambiarfuerza = false;
+                    System.out.println("Tas pobre");
+                } else if (respuesta.equals("n")) {
+                    cambiarfuerza = false;
+                    System.out.println("Te quedas con tu fuerza actual.");
+                } else {
+                    System.out.println("¡s/n!");
+                }
             }
-
             while (true) {
-                System.out.println("Que deseas hacer?\n1. Luchar contra el enemigo\n2. \n3. Consultar estadísticas\n4. ");
-                
-                int eleccion = scanner.nextInt();
+                System.out.println(
+                        "¿Que deseas hacer?\n1. Luchar contra el enemigo\n2. Tienda \n3. Consultar estadísticas\n4. Salir");
 
+                int eleccion = scanner.nextInt();
+                scanner.nextLine();
                 switch (eleccion) {
                     case 1:
 
@@ -58,19 +62,28 @@ public class Main {
                         String jefeSeleccionado = jefes[random];
                         System.out.println("Estás por enfrentar a " + jefeSeleccionado);
                         int puntosEnemigo = enemigo.calcularFuerzaEnemigo();
-
+                        System.out.println("tienes "+ jugador1.getPuntosAtaque() + " ataque y el enemigo tiene " + enemigo.getPuntos_ataque() );
                         int oroSoltado = enemigo.soltarOro();
 
-                        if (puntosEnemigo <= nuevoValorFuerza) {
+                        if (enemigo.getPuntos_ataque() <= jugador1.getPuntosAtaque()) {
                             System.out.println("¡Has ganado! Obtienes " + oroSoltado + " oro");
-                            
+                            jugador1.setDinero(jugador1.getDinero() + oroSoltado);
+
                         } else {
                             System.out.println("Has perdido contra " + jefeSeleccionado + ".");
+                            int restaSalud = puntosEnemigo - fuerzaInicial;
+                            jugador1.setPuntosSalud(jugador1.getPuntosSalud() - restaSalud);
+                            if (jugador1.getPuntosSalud() <= 0) {
+                                System.out.println("¡Has perdido!");
+                                return;
+                            }
+
                         }
                         break;
                     case 2:
                         System.out.println(
-                                "Opciones de compra:\n1. Calculadora - Puntos de ataque: 5 - Precio: 3\n2. HTML - Recupera 10 puntos de salud - Precio: 5\n3. CalculadoraPlus - Puntos de ataque: 7 - Precio: 7\n4. CalculadoraPlusPlus - Puntos de ataque: 20 - Precio: 12\n5. CalculadoraPlusPlusPlus - Puntos de ataque: 30 - Precio: 24\n6. CalculadoraPlusPlusPlusPlus - Puntos de ataque: 99 - Precio: 33\n7. Salir de la tienda");
+                                "Tienes " + jugador1.getDinero()
+                                        + " oros.\nOpciones de compra:\n1. Calculadora - Puntos de ataque: 5 - Precio: 3\n2. HTML - Recupera 10 puntos de salud - Precio: 5\n3. CalculadoraPlus - Puntos de ataque: 7 - Precio: 7\n4. CalculadoraPlusPlus - Puntos de ataque: 20 - Precio: 12\n5. CalculadoraPlusPlusPlus - Puntos de ataque: 30 - Precio: 24\n6. CalculadoraPlusPlusPlusPlus - Puntos de ataque: 99 - Precio: 33\n7. Salir de la tienda");
                         int opcionCompra = scanner.nextInt();
                         scanner.nextLine();
 
@@ -144,7 +157,7 @@ public class Main {
                                 break;
                             case 7:
                                 System.out.println("Saliendo de la tienda.");
-                                return;
+                                break;
                             default:
                                 System.out.println("Opción no válida.");
                                 break;
@@ -160,8 +173,12 @@ public class Main {
                     default:
                         System.out.println("Selecciona una de las 4 opciones");
                         break;
-                }
+
+                }scanner.close();
+                return;
             }
+
         }
+
     }
 }
