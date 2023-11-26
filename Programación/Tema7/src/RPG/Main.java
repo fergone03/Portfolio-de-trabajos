@@ -3,8 +3,16 @@ package RPG;
 import java.util.Scanner;
 import java.lang.Math;
 
+/**
+ *
+ * @author Alex Castillo/Esteban
+ */
 public class Main {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Jugador jugador1 = new Jugador("Paco");
         Enemigo enemigo = new Enemigo();
@@ -62,7 +70,7 @@ public class Main {
                         String jefeSeleccionado = jefes[random];
                         System.out.println("Estás por enfrentar a " + jefeSeleccionado);
                         int puntosEnemigo = enemigo.calcularFuerzaEnemigo();
-                        System.out.println("tienes "+ jugador1.getPuntosAtaque() + " ataque y el enemigo tiene " + enemigo.getPuntos_ataque() );
+                        System.out.println("tienes " + jugador1.getPuntosAtaque() + " ataque y el enemigo tiene " + enemigo.getPuntos_ataque());
                         int oroSoltado = enemigo.soltarOro();
 
                         if (enemigo.getPuntos_ataque() <= jugador1.getPuntosAtaque()) {
@@ -83,7 +91,7 @@ public class Main {
                     case 2:
                         System.out.println(
                                 "Tienes " + jugador1.getDinero()
-                                        + " oros.\nOpciones de compra:\n1. Calculadora - Puntos de ataque: 5 - Precio: 3\n2. HTML - Recupera 10 puntos de salud - Precio: 5\n3. CalculadoraPlus - Puntos de ataque: 7 - Precio: 7\n4. CalculadoraPlusPlus - Puntos de ataque: 20 - Precio: 12\n5. CalculadoraPlusPlusPlus - Puntos de ataque: 30 - Precio: 24\n6. CalculadoraPlusPlusPlusPlus - Puntos de ataque: 99 - Precio: 33\n7. Salir de la tienda");
+                                + " oros.\nOpciones de compra:\n1. Calculadora - Puntos de ataque: 5 - Precio: 3\n2. HTML - Recupera 10 puntos de salud - Precio: 5\n3. CalculadoraPlus - Puntos de ataque: 7 - Precio: 7\n4. CalculadoraPlusPlus - Puntos de ataque: 20 - Precio: 12\n5. CalculadoraPlusPlusPlus - Puntos de ataque: 30 - Precio: 24\n6. CalculadoraPlusPlusPlusPlus - Puntos de ataque: 99 - Precio: 33\n7. Salir de la tienda");
                         int opcionCompra = scanner.nextInt();
                         scanner.nextLine();
 
@@ -125,7 +133,7 @@ public class Main {
                                     jugador1.setPuntosAtaque(jugador1.getPuntosAtaque() + 7);
                                     System.out.println(
                                             "Has comprado una Calculadora+++++++2UltimateEdition. Tu nuevo ataque es: "
-                                                    + jugador1.getPuntosAtaque());
+                                            + jugador1.getPuntosAtaque());
                                 } else {
                                     System.out.println(
                                             "No tienes suficiente oro para comprar una Calculadora+++++++2UltimateEdition.");
@@ -137,7 +145,7 @@ public class Main {
                                     jugador1.setPuntosAtaque(jugador1.getPuntosAtaque() + 30);
                                     System.out.println(
                                             "Has comprado una Calculadora+++++++2UltimateEdition2. Ahora es personal. Tu nuevo ataque es: "
-                                                    + jugador1.getPuntosAtaque());
+                                            + jugador1.getPuntosAtaque());
                                 } else {
                                     System.out.println(
                                             "No tienes suficiente oro para comprar una Calculadora+++++++2UltimateEdition2. Ahora es personal.");
@@ -149,7 +157,7 @@ public class Main {
                                     jugador1.setPuntosAtaque(jugador1.getPuntosAtaque() + 99);
                                     System.out.println(
                                             "Has comprado una Calculadora+++++++++++2UltimateEdition3. La rebelión de los arrays. Ahora es personal. Tu nuevo ataque es: "
-                                                    + jugador1.getPuntosAtaque());
+                                            + jugador1.getPuntosAtaque());
                                 } else {
                                     System.out.println(
                                             "No tienes suficiente oro para comprar una Calculadora+++++++++++2UltimateEdition3. La rebelión de los arrays. Ahora es personal.");
@@ -174,7 +182,8 @@ public class Main {
                         System.out.println("Selecciona una de las 4 opciones");
                         break;
 
-                }scanner.close();
+                }
+                scanner.close();
                 return;
             }
 
