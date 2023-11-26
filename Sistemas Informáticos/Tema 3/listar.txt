@@ -1,0 +1,9 @@
+ El volumen de la unidad C es SSD
+ El n£mero de serie del volumen es: 8E48-9EEB
+
+ Directorio de C:\Users\Reo\Documents\Portfolio-de-trabajos\Sistemas Inform ticos\Tema 3\pepe
+
+26/11/2023  15:05    <DIR>          .
+26/11/2023  15:05    <DIR>          ..
+               0 archivos              0 bytes
+               2 dirs  92.191.932.416 bytes libres
