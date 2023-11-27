@@ -1,0 +1,55 @@
+.container {
+  border: 2px solid brown;
+  background-color: #f9f9f9; 
+}
+
+header {
+  text-align: center;
+  background-color: #cabd0d; 
+  height: 100px;
+}
+
+.dentro1 {
+  background-color: blue;
+  padding: 5px;
+  margin-right: 20px;
+}
+.dentro2 {
+  background-color: violet;
+  padding: 5px;
+  margin-right: 20px;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: #ccc; 
+}
+
+nav {
+  background-color: #d3d3d3; 
+  text-align: center;
+}
+.rufus {
+  display: flex;
+}
+
+.content {
+  border: 1px solid black;
+  flex: 1; 
+  background-color: #eaeaea; 
+  height: 430px;
+  background-color: darkorchid;
+  margin-right: 30px;
+}
+
+aside {
+  width: 7%;
+  background-color: #c40606; 
+  border: 1px solid black;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: green;
+}

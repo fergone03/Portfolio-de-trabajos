@@ -1,6 +1,7 @@
 
 package RPG;
 
+import java.lang.Math;
 import java.util.Random;
 
 /**
@@ -15,9 +16,10 @@ public class Jugador {
 
     public Jugador(String Nombre) {
         this.Nombre = Nombre;
-        this.PuntosSalud = 20;
+        this.PuntosSalud = 10;
         this.PuntosAtaque = 0;
         this.Dinero = 2;
+
     }
 
     public String getNombre() {
@@ -41,7 +43,8 @@ public class Jugador {
     }
 
     public void setPuntosAtaque(int puntosAtaque) {
-        PuntosAtaque = puntosAtaque;
+        this.PuntosAtaque = puntosAtaque;
+
     }
 
     public int getDinero() {
@@ -52,18 +55,21 @@ public class Jugador {
         Dinero = dinero;
     }
 
-    public void calcularFuerzaInicial() {
+    public int calcularFuerzaInicial() {
         Random random = new Random();
-        this.puntosAtaque = random.nextInt(10) + 1;
+        this.PuntosAtaque = random.nextInt(10) + 1;
+        return this.PuntosAtaque;
     }
+
+
 
     @Override
     public String toString() {
         return "Jugador{" +
-                "nombre='" + nombre + '\'' +
-                ", puntosSalud=" + puntosSalud +
-                ", puntosAtaque=" + puntosAtaque +
-                ", dinero=" + dinero +
+                "nombre='" + Nombre + '\'' +
+                ", puntosSalud=" + PuntosSalud +
+                ", puntosAtaque=" + PuntosAtaque +
+                ", dinero=" + Dinero +
                 '}';
 
     }

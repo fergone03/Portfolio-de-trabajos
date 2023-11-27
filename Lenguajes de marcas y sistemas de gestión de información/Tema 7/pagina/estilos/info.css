@@ -1,19 +1,63 @@
 body {
   font-family: "Roboto", sans-serif;
+  text-align: justify;
+  text-justify: inter-word;
+  background-color: #3b3a3a;
 }
 header {
+  width: 99%;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  height: 150px;
+  background-color: #3b3a3a;
+  position: fixed;
   overflow: hidden;
+  color: darkgrey;
 }
+header a {
+  float: left;
+  color: darkgrey;
+  margin-left: 250px;
+  margin-top: 27px;
+  border: 2px solid darkgrey;
+}
+
 .formhead {
   float: right;
   margin-top: 10px;
   margin-right: 10px;
 }
+form {
+  background-color: #b40000;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+input {
+  display: block;
+  font-size: 14px;
+  width: 70%;
+  border: none;
+  border-radius: 2px;
+}
+
+button {
+  background-color: rgba(255, 0, 0, 0.818);
+  border: none;
+  border-radius: 5px;
+  color: #3b3a3a;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
 .head3r {
   float: left;
   margin-left: 20px;
+  margin-top: 15px;
   display: flex;
 }
 .allhead {
@@ -23,9 +67,7 @@ header {
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   width: 210px;
-
   height: 140px;
-  justify-content: center;
   gap: 10px;
 }
 
@@ -34,21 +76,40 @@ header {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   width: 210px;
   height: 150px;
-  justify-content: center;
   gap: 10px;
 }
 aside {
+  color: darkgrey;
+
+  float: left;
   width: 251px;
   margin-left: -25px;
+  position: fixed;
+  top: 33%;
+}
+aside a {
+  color: darkgrey;
 }
 main {
-  text-align: center;
+  margin-top: 150px;
+  color: white;
+
+  float: right;
+  width: calc(100% - 251px);
+  margin-bottom: 60px;
+}
+main p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 footer {
+  clear: both;
   text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
-
 a {
   text-decoration: none;
   color: black;
