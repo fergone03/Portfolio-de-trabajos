@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+.fondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.tarjeta {
+  width: 50%;
+  background-image: url("/2.Vacaciones/imgs/avion.webp");
+  background-size: cover;
+  padding: 20px;
+  border: 2px solid yellow;
+}
+.cuadro1 {
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.cuadro2 {
+  text-align: center;
+  background-color: salmon;
+  border: 1px solid gray;
+}

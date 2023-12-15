@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+table {
+  border: 1px solid black;
+}
+th {
+  background-color: brown;
+  color: white;
+  width: 1rem;
+}
+img {
+  height: 4rem;
+  width: 4rem;
+}
+.impar {
+  background-color: red;
+  height: 4rem;
+  width: 4rem;
+}
+.par {
+  background-color: gray;
+  height: 4rem;
+  width: 4rem;
+}

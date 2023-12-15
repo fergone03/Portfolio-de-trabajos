@@ -3,8 +3,16 @@ package RPG;
 import java.util.Scanner;
 import java.lang.Math;
 
+/**
+ *
+ * @author Esteban y Alex Castillo
+ */
 public class Main {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Jugador jugador1 = new Jugador("Paco");
         Enemigo enemigo = new Enemigo();
