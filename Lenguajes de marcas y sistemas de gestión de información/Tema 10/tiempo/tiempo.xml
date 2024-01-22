@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="tiempo.css" type="text/css"?>
+<temperatura>
+<lugar>
+<provincia>Granada</provincia>
+<fecha>04/02/2021</fecha>
+<maxima>Máxima: 24 ªC</maxima>
+<minima>Mínima: 16 ªC</minima>
+</lugar>
+<predicciones>
+<prediccion tiempo="nubes">
+<hora>8:00 horas</hora>
+<grados> 16ºC </grados>
+</prediccion>
+<prediccion tiempo="sol">
+<hora>16:00 horas</hora>
+<grados> 24ºC </grados>
+</prediccion>
+<prediccion tiempo="lluvia">
+<hora>20:00 horas</hora>
+<grados> 20ºC </grados>
+</prediccion>
+</predicciones>
+</temperatura>

@@ -1,0 +1,13 @@
+172.30.1.33
+Tipo B
+Máscara 255.255.0.0
+Dir. Red 172.30.0.0
+Dir. Broadcast 172.30.255.255
+Nº hosts
+
+165.100.1.195
+Tipo B
+Máscara 255.255.255.192
+Dir. Red 165.100.0.0
+Dir. Broadcast 165.100.255.255
+Nº hosts

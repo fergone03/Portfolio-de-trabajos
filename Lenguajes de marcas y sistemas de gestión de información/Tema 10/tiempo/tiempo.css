@@ -1,0 +1,36 @@
+temperatura {
+  height: 120px;
+  margin-top: 4%;
+}
+
+lugar {
+  display: block;
+  border-radius: 10px 0 0 10px; /* Los valores representan la parte superior izquierda, superior derecha, inferior derecha e inferior izquierda respectivamente */
+  border: 1px solid #000;
+  width: 7%;
+  float: left;
+  margin-left: 10%;
+
+  height: 70%;
+}
+
+provincia,
+fecha,
+maxima,
+minima,
+prediccion,
+hora,
+grados {
+  display: block;
+}
+
+prediccion {
+  display: block;
+  border: 1px solid #000;
+  width: 7%;
+  float: left;
+  height: 70%;
+}
+prediccion[tiempo="lluvia"] {
+  border-radius: 0 10px 10px 0; /* Los valores representan la parte superior izquierda, superior derecha, inferior derecha e inferior izquierda respectivamente */
+}
