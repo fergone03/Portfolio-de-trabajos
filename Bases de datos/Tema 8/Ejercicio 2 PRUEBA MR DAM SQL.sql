@@ -23,7 +23,7 @@ CREATE TABLE EQUIPO (
     FOREIGN KEY (ID_PRODUCTO) REFERENCES PRODUCTO(ID)
 ); 
 CREATE TABLE COMPONENTE (
-    ID INT PRIMARY KEY, 
+    ID INT PRIMARY KEY DEFAULT'1', 
     ID_PRODUCTO INT,
     NOMBRE VARCHAR(20),
     TIPO VARCHAR(20)
@@ -64,10 +64,22 @@ CREATE TABLE EQUIPO_COMPUESTO_COMPONENTE (
     FOREIGN KEY (ID_EQUIPO) REFERENCES EQUIPO(ID_PRODUCTO),
     FOREIGN KEY (ID_COMPONENTE) REFERENCES COMPONENTE(ID)
 );
+
+INSERT INTO COMPONENTE (ID, ID_PRODUCTO, NOMBRE, TIPO) VALUES
+(DEFAULT, 1, 'Componente1', 'Tipo1'),
+(2, 1, 'Componente2', 'Tipo2'),
+(3, 1, 'Componente3', 'Tipo3');
+
 INSERT INTO PRODUCTO (NOMBRE, PRECIO, DIVISA) VALUES
-    ('Producto 1', 100.00, 'USD'),
-    ('Producto 2', 200.00, 'EUR');
+    ('damn', 100.00, 'USD'),
+    ('howlymowly', 200.00, 'EUR'),
+    ('anotherproduct', 150.00, 'GBP');
 
 INSERT INTO EQUIPO (NOMBRE, CATEGORÍA, ID_PRODUCTO) VALUES
-    ('Equipo 1', 'Custom', 1),
-    ('Equipo 2', 'Preconfigurado', 2);
+    ('Challenger', 'Custom', 1),
+    ('VirXing1', 'Preconfigurado', 2),
+    ('VirXing2', 'Preconfigurado', 3);
+SELECT * FROM EQUIPO_COMPUESTO_COMPONENTE;
+SELECT * FROM PRODUCTO;
+SELECT * FROM EQUIPO;
+SELECT * FROM COMPONENTE;

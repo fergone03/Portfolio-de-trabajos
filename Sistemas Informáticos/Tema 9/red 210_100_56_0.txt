@@ -1,0 +1,12 @@
+210.100.56.0 -> 30 hosts
+
+Tipo C
+
+11111111.11111111.11111111.11100000
+
+224
+
+Nº de máscaras 255.255.255.224 	
+Dirección de red de la 3a= 210.100.56.64
+Dirección de broadcast de la 4a= 210.100.56.127
+IP válidas de la 6a= 210.100.56.161 - 210.100.56.190

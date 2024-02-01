@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE software [
+    <!ELEMENT software (programa+)>
+    
+    <!ELEMENT programa (titulo, español?, precio, categoria, descripcion, departamentos+, web?, caratula?)>
+    <!ATTLIST programa
+        codigo CDATA #REQUIRED
+        version CDATA #IMPLIED
+        año CDATA #REQUIRED
+        SO (Windows|Mac) "Windows"
+    >
+
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT español EMPTY>
+    <!ELEMENT precio (#PCDATA)>
+    <!ELEMENT categoria (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    
+    <!ELEMENT departamentos (departamento+)>
+    <!ELEMENT departamento (#PCDATA)>
+    
+    <!ELEMENT web (#PCDATA)>
+    <!ELEMENT caratula (#PCDATA)>
+]>
+<software>
+    <programa codigo="P1" version="16.0" año="2016" SO="Windows">
+        <titulo>Microsoft Office 2026</titulo>
+        <español/>
+        <precio>1500€</precio>
+        <categoria>Ofimática</categoria>
+        <descripcion>Paquete ofimático de Microsoft</descripcion>
+        <departamentos>
+            <departamento>Sistemas</departamento>
+            <departamento>Contabilidad</departamento>
+        </departamentos>
+        <web>www.microsoft.com</web>
+        <caratula>imagen</caratula>
+    </programa>
+</software>

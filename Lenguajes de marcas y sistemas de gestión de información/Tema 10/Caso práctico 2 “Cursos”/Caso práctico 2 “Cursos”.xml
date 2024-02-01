@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE listacursos [
+    <!ELEMENT listacursos (curso+)>
+    <!ELEMENT curso (profesores, alumnos, contenido)>
+    <!ATTLIST curso codigo CDATA #REQUIRED>
+    <!ELEMENT profesores (profesor+)>
+    <!ELEMENT profesor (nombre, apellido)>
+    <!ATTLIST profesor dni CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT alumnos (#PCDATA)>
+    <!ELEMENT contenido (descripcion, horas, creditos)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT horas (#PCDATA)>
+    <!ELEMENT creditos (#PCDATA)>
+]>
+<listacursos>
+    <curso codigo="C001">
+        <profesores>
+            <profesor dni="12345678A">
+                <nombre>Alberto</nombre>
+                <apellido>González</apellido>
+            </profesor>
+        </profesores>
+        <alumnos>
+        </alumnos>
+        <contenido>
+            <descripcion>Descripción del curso</descripcion>
+            <horas>40</horas>
+            <creditos>3</creditos>
+        </contenido>
+    </curso>
+</listacursos>

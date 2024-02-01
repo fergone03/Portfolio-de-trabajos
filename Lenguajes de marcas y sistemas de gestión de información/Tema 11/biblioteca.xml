@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="biblioteca.xsd">
+    <libro>
+        <nombre>Introducción a XML</nombre>
+        <autor>Pedro Martínez</autor>
+        <autor>Alberto Ruiz</autor>
+        <editorial>Paraninfo</editorial>
+        <paginas>345</paginas>
+        <precio>45</precio>
+    </libro>
+    <libro>
+      <nombre>CSS3</nombre>
+      <autor>Luis Ruiz</autor>
+      <editorial>Síntesis</editorial>
+      <paginas>234</paginas>
+      <precio_con_iva>45</precio_con_iva>
+    </libro>
+    <libro>
+      <nombre>Ell señor de los anillos</nombre>
+      <autor>Tolkien</autor>
+      <paginas>234</paginas>
+      <precio>34</precio>
+    </libro>
+</biblioteca>

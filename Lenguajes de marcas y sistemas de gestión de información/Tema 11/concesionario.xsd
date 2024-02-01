@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="concesionario">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="coche" type="tipocoche" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="provincia" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element> 
+			<xs:complexType name="tipocoche">
+			<xs:sequence>
+			<xs:element name="marca" type="xs:string"/>
+			<xs:element name="modelo" type="xs:string"/>
+			<xs:element name="cilindrada" type="xs:decimal"/>
+			<xs:element name="combustible" type="tipocombustible"/>
+			<xs:element name="precio" type="xs:string"/>
+			<xs:element name="año" type="tipoanio"/>
+			<xs:element name="color" type="xs:string"/>
+			<xs:element name="interesado" type="tipodni" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="fecha_limite" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+				
+					<xs:attribute name="fecha" type="xs:date" use="optional"/>
+			</xs:complexType>
+			</xs:element>
+			</xs:sequence>	
+						<xs:attribute name="matricula" type="tipomatricula" use="required"/>
+
+						</xs:complexType>
+
+			<xs:simpleType name="tipocombustible">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Gasoil"/>
+					<xs:enumeration value="Gasolina"/>
+				</xs:restriction>
+			</xs:simpleType>
+				<xs:simpleType name="tipoanio">
+				<xs:restriction base="xs:integer">
+					<xs:totalDigits value="4"/>
+				</xs:restriction>
+				</xs:simpleType>
+				<xs:simpleType name="tipodni">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="\d{8}[A-Z]"/>
+				</xs:restriction>
+				</xs:simpleType>
+				<xs:simpleType name="tipomatricula">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="\d{4}[A-Z][A-Z][A-Z]"/>
+				</xs:restriction>
+				</xs:simpleType>
+</xs:schema>

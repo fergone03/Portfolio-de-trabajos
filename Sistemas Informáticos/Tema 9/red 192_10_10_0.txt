@@ -1,0 +1,15 @@
+192.10.10.0 -> 14 redes 
+
+Tipo C
+
+11000000.00001010.00001010.00000000
+
+426 
+
+Nº Máscara = 255.255.255.240
+
+Dirección de red de la 3a= 192.10.10.32 
+
+Dirección de broadcast de la 4a= 192.10.10.63
+
+IP válidas de la 6a= 192.10.10.81-192.10.10.94

@@ -1,0 +1,55 @@
+172.10.128.0/17
+11111111.11111111.11111111.11100000 se puede
+Tipo B
+2en=5000 2e13
+255.255.255.224
+
+
+Edificio 1 (172.10.0.0/27):
+
+Máscara de subred: 255.255.255.224 
+Dirección de red: 172.10.0.0
+Dirección de broadcast: 172.10.0.31
+IPs útiles: 172.10.0.1 a 172.10.0.30
+Edificio 2 (172.10.16.0/28):
+
+Máscara de subred: 255.255.255.240 
+Dirección de red: 172.10.16.0
+Dirección de broadcast: 172.10.16.15
+IPs útiles: 172.10.16.1 a 172.10.16.14
+Edificio 3 (172.10.32.0/29):
+
+Máscara de subred: 255.255.255.248 
+Dirección de red: 172.10.32.0
+Dirección de broadcast: 172.10.32.7
+IPs útiles: 172.10.32.1 a 172.10.32.6
+Edificio 4 (172.10.48.0/28):
+
+Máscara de subred: 255.255.255.240 
+Dirección de red: 172.10.48.0
+Dirección de broadcast: 172.10.48.15
+IPs útiles: 172.10.48.1 a 172.10.48.14
+Edificio 5 (172.10.64.0/28):
+
+Máscara de subred: 255.255.255.240 
+Dirección de red: 172.10.64.0
+Dirección de broadcast: 172.10.64.15
+IPs útiles: 172.10.64.1 a 172.10.64.14
+Edificio 6 (172.10.80.0/27):
+
+Máscara de subred: 255.255.255.224 
+Dirección de red: 172.10.80.0
+Dirección de broadcast: 172.10.80.31
+IPs útiles: 172.10.80.1 a 172.10.80.30
+Edificio 7 (172.10.96.0/26):
+
+Máscara de subred: 255.255.255.192 
+Dirección de red: 172.10.96.0
+Dirección de broadcast: 172.10.96.63
+IPs útiles: 172.10.96.1 a 172.10.96.62
+Edificio 8 (172.10.104.0/24):
+
+Máscara de subred: 255.255.255.0 (24 bits de 1 seguidos de 8 bits de 0)
+Dirección de red: 172.10.104.0
+Dirección de broadcast: 172.10.104.255
+IPs útiles: 172.10.104.1 a 172.10.104.254
