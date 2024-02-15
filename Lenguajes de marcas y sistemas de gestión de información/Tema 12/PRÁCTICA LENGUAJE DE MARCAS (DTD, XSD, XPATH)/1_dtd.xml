@@ -1,0 +1,85 @@
+<!DOCTYPE instituto 
+ [
+    <!ELEMENT instituto (ciclos, notas)>
+<!ATTLIST instituto nombre CDATA #REQUIRED>
+
+<!ELEMENT ciclos (especialidad+)>
+<!ELEMENT especialidad (ciclo+)>
+<!ATTLIST especialidad nombre CDATA #REQUIRED>
+
+<!ELEMENT ciclo (#PCDATA)>
+<!ATTLIST ciclo id ID #REQUIRED
+                      grado (Medio|Superior) #REQUIRED>
+
+<!ELEMENT notas (modulo+)>
+<!ELEMENT modulo (alumno+)>
+<!ATTLIST modulo ciclo IDREF #REQUIRED
+                     nombre CDATA #REQUIRED>
+
+<!ELEMENT alumno (nombre, nota, sexo)>
+<!ATTLIST alumno aprobado (SI|NO) #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nota (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+]
+>
+<instituto nombre="Medac Formación">
+    <ciclos>
+        <especialidad nombre="Informática">
+            <ciclo id="DAW" grado="Superior">
+                Desarrollo de aplicaciones Web
+            </ciclo>
+            <ciclo id="ASIR" grado="Superior">
+                Administración de Sistemas informáticos y Redes
+            </ciclo>
+            <ciclo id="SMR" grado="Medio">
+                Sistemas Microinformáticos y Redes
+            </ciclo>
+        </especialidad>
+        <especialidad nombre="Administrativo">
+            <ciclo id="GA" grado="Medio">
+                Gestión Administrativa
+            </ciclo>
+            <ciclo id="AF" grado="Superior">
+                Administración y Finanzas
+            </ciclo>
+        </especialidad>
+    </ciclos>
+    <notas>
+        <modulo ciclo="DAW" nombre="LLMM">
+            <alumno aprobado="SI">
+                <nombre>Federico Ruíz</nombre>
+                <nota>8</nota>
+                <sexo>Hombre</sexo>
+            </alumno>
+            <alumno aprobado="NO">
+                <nombre>Silvia Martín</nombre>
+                <nota>3</nota>
+                <sexo>Mujer</sexo>
+            </alumno>
+            <alumno aprobado="SI">
+                <nombre>Manolo Chicón</nombre>
+                <nota>8</nota>
+                <sexo>Hombre</sexo>
+            </alumno>
+        </modulo>
+        <modulo ciclo="DAW" nombre="PRO">
+            <alumno aprobado="SI">
+                <nombre>Federico Ruíz</nombre>
+                <nota>9</nota>
+                <sexo>Hombre</sexo>
+            </alumno>
+            <alumno aprobado="SI">
+                <nombre>Silvia Martín</nombre>
+                <nota>6</nota>
+                <sexo>Mujer</sexo>
+            </alumno>
+            <alumno aprobado="SI">
+                <nombre>Manolo Chicón</nombre>
+                <nota>5</nota>
+                <sexo>Hombre</sexo>
+            </alumno>
+        </modulo>
+    </notas>
+</instituto>

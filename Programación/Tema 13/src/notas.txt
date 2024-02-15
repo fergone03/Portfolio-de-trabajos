@@ -1,0 +1,18 @@
+Estudiante 1
+Nota 1: 12.0
+Nota 2: 12.0
+Nota 3: 11.0
+Media: 11.666666666666666 - No puedes sacar más de 10
+
+Estudiante 2
+Nota 1: 1.0
+Nota 2: 2.0
+Nota 3: 3.0
+Media: 2.0 - Muy Insuficiente
+
+Estudiante 3
+Nota 1: 7.0
+Nota 2: 8.0
+Nota 3: 9.0
+Media: 8.0 - Notable
+
