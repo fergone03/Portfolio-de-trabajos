@@ -1,0 +1,406 @@
+<marcador>
+<competicion id="1">
+<nombre>LFP 1 DIVISION</nombre>
+<fase id="0"> </fase>
+<jornada id="10" jornadaAnterior="https://www.marca.com/marcador/futbol/iphone/1/2022_23/fase0/jornada_9/marcador.xml" jornadaSiguiente="https://www.marca.com/marcador/futbol/iphone/1/2022_23/fase0/jornada_11/marcador.xml"/>
+<temporada>2022_23</temporada>
+<grupos>
+<grupo id="1">
+<eventos>
+<evento id="524908">
+<fecha>18/10/2022 19:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="17">Sevilla</equipolocal>
+<equipovisitante id="21">Valencia</equipovisitante>
+<resultadolocal>1</resultadolocal>
+<resultadovisitante>1</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/179.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/191.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/sev_val/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>-1</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/sev_val/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524909">
+<fecha>18/10/2022 20:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="109">Getafe</equipolocal>
+<equipovisitante id="2">Athletic</equipovisitante>
+<resultadolocal>2</resultadolocal>
+<resultadovisitante>2</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/1450.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/174.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/get_ath/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>-1</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/get_ath/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524905">
+<fecha>18/10/2022 21:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="3">Atlético</equipolocal>
+<equipovisitante id="13">Rayo</equipovisitante>
+<resultadolocal>1</resultadolocal>
+<resultadovisitante>1</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/175.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/184.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/atm_ray/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>2</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/atm_ray/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524907">
+<fecha>19/10/2022 19:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="197">Cádiz</equipolocal>
+<equipovisitante id="5">Betis</equipovisitante>
+<resultadolocal>0</resultadolocal>
+<resultadovisitante>0</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/1737.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/185.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/cad_bet/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>-1</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/cad_bet/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524912">
+<fecha>19/10/2022 19:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="20">Valladolid</equipolocal>
+<equipovisitante id="6">Celta</equipovisitante>
+<resultadolocal>4</resultadolocal>
+<resultadovisitante>1</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/192.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/176.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/vad_cel/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>-1</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/vad_cel/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524911">
+<fecha>19/10/2022 20:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="15">R. Sociedad</equipolocal>
+<equipovisitante id="114">Mallorca</equipovisitante>
+<resultadolocal>1</resultadolocal>
+<resultadovisitante>0</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/188.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/181.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/rso_mal/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>2</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/rso_mal/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524913">
+<fecha>19/10/2022 21:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="177">Elche</equipolocal>
+<equipovisitante id="14">R. Madrid</equipovisitante>
+<resultadolocal>0</resultadolocal>
+<resultadovisitante>3</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/954.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/186.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/elc_rma/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>2</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/elc_rma/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524904">
+<fecha>20/10/2022 19:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="94">Almería</equipolocal>
+<equipovisitante id="302">Girona</equipovisitante>
+<resultadolocal>3</resultadolocal>
+<resultadovisitante>2</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/1564.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/2893.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/alm_ger/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>2</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/alm_ger/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524910">
+<fecha>20/10/2022 20:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="117">Osasuna</equipolocal>
+<equipovisitante id="9">Espanyol</equipovisitante>
+<resultadolocal>1</resultadolocal>
+<resultadovisitante>0</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/450.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/177.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/osa_esp/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>2</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/osa_esp/directo.xml</enlaceDirecto>
+</evento>
+<evento id="524906">
+<fecha>20/10/2022 21:00</fecha>
+<estado id="3">Finalizado</estado>
+<equipolocal id="4">Barcelona</equipolocal>
+<equipovisitante id="132">Villarreal</equipovisitante>
+<resultadolocal>3</resultadolocal>
+<resultadovisitante>0</resultadovisitante>
+<tipodeporte>1</tipodeporte>
+<escudoLocal>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/178.png</escudoLocal>
+<escudoVisitante>https://e00-marca.uecdn.es/assets/datos-deportivos/escudos/opta/png/ios/28px/2x/449.png</escudoVisitante>
+<tv/>
+<estadisticas/>
+<alineaciones>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/bar_vil/alineaciones.html</alineaciones>
+<comentariosLectores/>
+<previacronica>2</previacronica>
+<enlaceDirecto>https://www.marca.com/eventos/marcador/futbol/2022_23/la-liga/jornada_10/bar_vil/directo.xml</enlaceDirecto>
+</evento>
+</eventos>
+<clasificacion>
+<team>
+<name>R. Madrid</name>
+<rank>1</rank>
+<points>28</points>
+<played>10</played>
+<won>9</won>
+<lost>0</lost>
+<drawn>1</drawn>
+<goals_scored>25</goals_scored>
+<goals_conceded>8</goals_conceded>
+</team>
+<team>
+<name>Barcelona</name>
+<rank>2</rank>
+<points>25</points>
+<played>10</played>
+<won>8</won>
+<lost>1</lost>
+<drawn>1</drawn>
+<goals_scored>24</goals_scored>
+<goals_conceded>4</goals_conceded>
+</team>
+<team>
+<name>R. Sociedad</name>
+<rank>3</rank>
+<points>22</points>
+<played>10</played>
+<won>7</won>
+<lost>2</lost>
+<drawn>1</drawn>
+<goals_scored>16</goals_scored>
+<goals_conceded>12</goals_conceded>
+</team>
+<team>
+<name>Atlético</name>
+<rank>4</rank>
+<points>20</points>
+<played>10</played>
+<won>6</won>
+<lost>2</lost>
+<drawn>2</drawn>
+<goals_scored>16</goals_scored>
+<goals_conceded>8</goals_conceded>
+</team>
+<team>
+<name>Betis</name>
+<rank>5</rank>
+<points>20</points>
+<played>10</played>
+<won>6</won>
+<lost>2</lost>
+<drawn>2</drawn>
+<goals_scored>13</goals_scored>
+<goals_conceded>6</goals_conceded>
+</team>
+<team>
+<name>Athletic</name>
+<rank>6</rank>
+<points>18</points>
+<played>10</played>
+<won>5</won>
+<lost>2</lost>
+<drawn>3</drawn>
+<goals_scored>19</goals_scored>
+<goals_conceded>8</goals_conceded>
+</team>
+<team>
+<name>Osasuna</name>
+<rank>7</rank>
+<points>16</points>
+<played>10</played>
+<won>5</won>
+<lost>4</lost>
+<drawn>1</drawn>
+<goals_scored>10</goals_scored>
+<goals_conceded>10</goals_conceded>
+</team>
+<team>
+<name>Valencia</name>
+<rank>8</rank>
+<points>15</points>
+<played>10</played>
+<won>4</won>
+<lost>3</lost>
+<drawn>3</drawn>
+<goals_scored>17</goals_scored>
+<goals_conceded>11</goals_conceded>
+</team>
+<team>
+<name>Villarreal</name>
+<rank>9</rank>
+<points>15</points>
+<played>10</played>
+<won>4</won>
+<lost>3</lost>
+<drawn>3</drawn>
+<goals_scored>12</goals_scored>
+<goals_conceded>6</goals_conceded>
+</team>
+<team>
+<name>Rayo</name>
+<rank>10</rank>
+<points>12</points>
+<played>10</played>
+<won>3</won>
+<lost>4</lost>
+<drawn>3</drawn>
+<goals_scored>11</goals_scored>
+<goals_conceded>13</goals_conceded>
+</team>
+<team>
+<name>Valladolid</name>
+<rank>11</rank>
+<points>11</points>
+<played>10</played>
+<won>3</won>
+<lost>5</lost>
+<drawn>2</drawn>
+<goals_scored>10</goals_scored>
+<goals_conceded>15</goals_conceded>
+</team>
+<team>
+<name>Sevilla</name>
+<rank>12</rank>
+<points>10</points>
+<played>10</played>
+<won>2</won>
+<lost>4</lost>
+<drawn>4</drawn>
+<goals_scored>10</goals_scored>
+<goals_conceded>15</goals_conceded>
+</team>
+<team>
+<name>Almería</name>
+<rank>13</rank>
+<points>10</points>
+<played>10</played>
+<won>3</won>
+<lost>6</lost>
+<drawn>1</drawn>
+<goals_scored>11</goals_scored>
+<goals_conceded>17</goals_conceded>
+</team>
+<team>
+<name>Celta</name>
+<rank>14</rank>
+<points>10</points>
+<played>10</played>
+<won>3</won>
+<lost>6</lost>
+<drawn>1</drawn>
+<goals_scored>11</goals_scored>
+<goals_conceded>20</goals_conceded>
+</team>
+<team>
+<name>Mallorca</name>
+<rank>15</rank>
+<points>9</points>
+<played>10</played>
+<won>2</won>
+<lost>5</lost>
+<drawn>3</drawn>
+<goals_scored>7</goals_scored>
+<goals_conceded>11</goals_conceded>
+</team>
+<team>
+<name>Espanyol</name>
+<rank>16</rank>
+<points>9</points>
+<played>10</played>
+<won>2</won>
+<lost>5</lost>
+<drawn>3</drawn>
+<goals_scored>12</goals_scored>
+<goals_conceded>17</goals_conceded>
+</team>
+<team>
+<name>Getafe</name>
+<rank>17</rank>
+<points>9</points>
+<played>10</played>
+<won>2</won>
+<lost>5</lost>
+<drawn>3</drawn>
+<goals_scored>10</goals_scored>
+<goals_conceded>18</goals_conceded>
+</team>
+<team>
+<name>Girona</name>
+<rank>18</rank>
+<points>8</points>
+<played>10</played>
+<won>2</won>
+<lost>6</lost>
+<drawn>2</drawn>
+<goals_scored>14</goals_scored>
+<goals_conceded>18</goals_conceded>
+</team>
+<team>
+<name>Cádiz</name>
+<rank>19</rank>
+<points>7</points>
+<played>10</played>
+<won>1</won>
+<lost>5</lost>
+<drawn>4</drawn>
+<goals_scored>4</goals_scored>
+<goals_conceded>17</goals_conceded>
+</team>
+<team>
+<name>Elche</name>
+<rank>20</rank>
+<points>3</points>
+<played>10</played>
+<won>0</won>
+<lost>7</lost>
+<drawn>3</drawn>
+<goals_scored>6</goals_scored>
+<goals_conceded>24</goals_conceded>
+</team>
+</clasificacion>
+</grupo>
+</grupos>
+</competicion>
+</marcador>
