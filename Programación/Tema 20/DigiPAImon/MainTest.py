@@ -4,6 +4,7 @@ from Enemigo import Enemigo
 from Jugador import Jugador
 from ListaNombres import ListaNombres
 from Inventario import Inventario
+jugador = Jugador()
 class Main:
     def __init__(self):
         self.inventario = Inventario()
@@ -147,12 +148,13 @@ class Main:
         else:
             print("Opción no válida.")
 
-    def usar_item(self, jugador, inventario):
+    def usar_item(self,  inventario):
             print("Inventario:")
             inventario.consultar_inventario()
             item = input("¿Qué ítem deseas usar? (p/b): ")
             if item == "p" and "Pocion" in inventario.objetos:
-                for digipaimon in jugador.lista_digipaimon:
+                    input()
+                    jugador.lista_digipaimon[i].
                     if digipaimon.vida < 100:
                         digipaimon.vida += 10
                         inventario.usar_objeto("Pocion", 1)
@@ -193,7 +195,7 @@ def main():
                     if resultado_combate == "perdido":
                         print("Has perdido la batalla y has perdido 1 Digicoins.")
                         jugador.digicoins -= 1
-                        if all(Digipaimon.vida <= 0 for Digipaimon in jugador.lista_digipaimon):
+                        if (Digipaimon.vida <= 0 for Digipaimon in jugador.lista_digipaimon):
                             print("¡Todos tus Digipaimons han perdido toda su vida! ¡Juego terminado!")
                             break
                     elif resultado_combate == "ganado":
