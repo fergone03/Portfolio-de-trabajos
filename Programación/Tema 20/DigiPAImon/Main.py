@@ -70,7 +70,7 @@ class Main:
 
 
 
-    def combate(self, Jugador, Enemigo): # Mira a ver q siempre acaba en empate y creo que te imprime el mismo Paimon q a ti
+    def combate(self, Jugador, Enemigo):
         lista_nombres = ListaNombres()  
         nuevo_enemigo = Enemigo(lista_nombres.obtener_nombres_entrenadores())  
         print("Has encontrado un Hilichurl:", nuevo_enemigo.nombre)    
@@ -84,49 +84,32 @@ class Main:
             victorias = 0
             derrotas = 0
             
-            for i in range(len(Jugador.lista_digipaimon), len(nuevo_enemigo.lista_digipaimon)):
+            for i in range((len(Jugador.lista_digipaimon), len(nuevo_enemigo.lista_digipaimon))):
                 Jugador_digipaimon = Jugador.lista_digipaimon[i]
                 Enemigo_digipaimon = nuevo_enemigo.lista_digipaimon[i]
+
+                
+                print("Tu", Jugador_digipaimon.nombre, "se va a enfrentar a", Enemigo_digipaimon.nombre, "del entrenador enemigo.")   #Aquí no llega a correr
                 
                 while Jugador_digipaimon.vida > 0 and Enemigo_digipaimon.vida > 0:
-                    if Jugador_digipaimon.ataque > Enemigo_digipaimon.ataque:
-                        Enemigo_digipaimon.vida -= (Jugador_digipaimon.ataque - Enemigo_digipaimon.ataque)
+                    Enemigo_digipaimon.vida -= ( Jugador_digipaimon.ataque - Enemigo_digipaimon.ataque)
+                    if Enemigo_digipaimon.vida <= 0:
                         victorias += 1
-                        print("Tu", Jugador_digipaimon.nombre, "ha ganado")
-                    elif Jugador_digipaimon.ataque < Enemigo_digipaimon.ataque:
-                        Jugador_digipaimon.vida -= (Enemigo_digipaimon.ataque - Jugador_digipaimon.ataque)
-                        derrotas += 1
-                        print("Tu", Jugador_digipaimon.nombre, "ha perdido")
-                    else:
-                        print("Empate")
-                        
-                if Jugador_digipaimon.vida <= 0:
-                    print("Tu Digipaimon ha sido derrotado.")
-                    Jugador.cantidad_digipaimon -= 1
-                    Jugador.lista_digipaimon.remove(Jugador_digipaimon)
+                        print("Resultado: Victoria para", Jugador_digipaimon.nombre)
+                        break
                     
-                if Enemigo_digipaimon.vida <= 0:
-                    print("El Digipaimon enemigo ha sido derrotado.")
-                    Enemigo.cantidad_digipaimon -= 1
-                    Enemigo.lista_digipaimon.remove(Enemigo_digipaimon)
+                    Jugador_digipaimon.vida -= (Enemigo_digipaimon.ataque - Jugador_digipaimon.ataque)
+                    if Jugador_digipaimon.vida <= 0:
+                        derrotas += 1
+                        print("Resultado: Victoria para", Enemigo_digipaimon.nombre)
+                        break
             
-            # Verificación del resultado del combate
             if victorias > derrotas:
-                Jugador.digicoins += victorias
-                print("Has ganado el combate, has recibido", victorias, "Digicoins")
+                print("¡Has ganado el combate!")
             elif derrotas > victorias:
-                Jugador.digicoins -= derrotas
-                if Jugador.digicoins < 0:
-                    Jugador.digicoins = 0
-                    print("No tienes suficientes Digicoins para continuar jugando.")
-                else:
-                    print("Has perdido el combate, has perdido", derrotas, "Digicoins")
+                print("¡Has perdido el combate!")
             else:
                 print("El combate terminó en empate.")
-                
-            print("\nVida de tus Digipaimon:")
-            for digipaimon in Jugador.lista_digipaimon:
-                print(digipaimon)
         
         elif respuesta == "No":
             print("¡Has decidido huir!")
@@ -136,6 +119,7 @@ class Main:
                 print("No tienes suficientes Digicoins para continuar jugando.")
         else:
             print("Por favor, responde 'Yes' o 'No'.")
+
 
 
 

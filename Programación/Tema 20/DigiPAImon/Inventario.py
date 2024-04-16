@@ -14,4 +14,7 @@ class Inventario:
             if self.objetos[nombre] <= 0:
                 print("Ya no te quedan ",self.objetos[nombre])
                 del self.objetos[nombre]
-
+    def consultar_inventario(self):
+        print("Inventario:")
+        for objeto, cantidad in self.objetos.items():
+            print(f"{objeto}: {cantidad}")    
