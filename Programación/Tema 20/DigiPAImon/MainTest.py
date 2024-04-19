@@ -108,7 +108,6 @@ class Main:
             else:
                 print("La batalla terminó en empate.")
         else:
-            # El jugador decide huir
             print("Has decidido huir.")
             if jugador.digicoins > 0:
                 jugador.digicoins -= 1

@@ -4,13 +4,8 @@ from Enemigo import Enemigo
 from Jugador import Jugador
 from ListaNombres import ListaNombres
 from Inventario import Inventario
-class Main:
-    def __init__(self):
-        self.inventario = Inventario()
-        self.lista_nombres = ListaNombres()
-        self.jugador = Jugador()
 
-    def generar_digipymon_aleatorio(self):
+def generar_digipymon_aleatorio(self):
         vida = random.randint(10, 20)
         ataque = random.randint(1, 10)
         nivel = random.randint(1, 3)
@@ -18,7 +13,7 @@ class Main:
         nombre = self.lista_nombres.obtener_nombre_digipaimon()
         return Digipaimon(nombre, vida, ataque, tipo, nivel)
 
-    def menu(self,jugador,inventario):
+def menu(self,jugador,inventario):
         print("Menu:")
         print("1. Buscar Digipymon")
         print("2. Luchar contra un entrenador")
@@ -34,7 +29,7 @@ class Main:
             if opcion == 1:
                 Main().buscar_digipymon(jugador)
             elif opcion == 2:
-                        resultado_combate = Main().combate(jugador)  # Almacenar el resultado del combate
+                        resultado_combate = Main().combate(jugador)  
                         if resultado_combate == "perdido":
                             print("Has perdido la batalla y has perdido 1 Digicoins.")
                             jugador.digicoins -= 1
@@ -58,16 +53,16 @@ class Main:
 
 
 
-    def buscar_digipaimon(self, jugador): 
+def buscar_digipaimon(jugador,inventario): 
         
-        digipaimon = self.generar_digipymon_aleatorio()
+        digipaimon = generar_digipymon_aleatorio()
         print("Digipymon encontrado:")
         print(digipaimon)
 
         probabilidad_captura = 100 - (digipaimon.nivel * 10)
         print("Probabilidad de captura:", probabilidad_captura, "%")
 
-        if "Digipyball" not in self.inventario.objetos or jugador.cantidad_digipaimon >= 6:
+        if "Digipyball" not in inventario.objetos or jugador.cantidad_digipaimon >= 6:
             print("No puedes capturar al Digipymon porque no tienes suficientes Digipyballs o espacio en tu equipo.")
             return
 
@@ -78,14 +73,20 @@ class Main:
                 jugador.añadir_digipaimon(digipaimon)
             else:
                 print("Has fallado al intentar capturar al Digipymon.")
-                self.inventario.usar_objeto("Digipyball", 1)
+                inventario.usar_objeto("Digipyball", 1)
         else:
             print("Has huido.")
             
-    def combate(self, Jugador,):
+def combate(jugador,):
         enemigo = Enemigo(ListaNombres().obtener_nombres_entrenadores())
         print("Has encontrado un Hilichurl:", enemigo)    
-        
+        for i in range(jugador.cantidad_digipaimon):
+            enemigo.añadir_digipaimon(Main().generar_digipymon_aleatorio())
+
+        if not jugador.lista_digipaimon:
+            print("No tienes ningún Digipymon para combatir.")
+            return
+
         print("¿Quieres enfrentarlo?")
         respuesta = input()
         
@@ -95,38 +96,45 @@ class Main:
             victorias = 0
             derrotas = 0
             
-            for i in range((len(Jugador.lista_digipaimon), len(nuevo_enemigo.lista_digipaimon))):
-                Jugador_digipaimon = Jugador.lista_digipaimon[i]
-                Enemigo_digipaimon = nuevo_enemigo.lista_digipaimon[i]
-
-                
-                print("Tu", Jugador_digipaimon.nombre, "se va a enfrentar a", Enemigo_digipaimon.nombre, "del entrenador enemigo.")   #Aquí no llega a correr
-                
-                while Jugador_digipaimon.vida > 0 and Enemigo_digipaimon.vida > 0:
-                    Enemigo_digipaimon.vida -= ( Jugador_digipaimon.ataque - Enemigo_digipaimon.ataque)
-                    if Enemigo_digipaimon.vida <= 0:
-                        victorias += 1
-                        print("Resultado: Victoria para", Jugador_digipaimon.nombre)
-                        break
-                    
-                    Jugador_digipaimon.vida -= (Enemigo_digipaimon.ataque - Jugador_digipaimon.ataque)
-                    if Jugador_digipaimon.vida <= 0:
-                        derrotas += 1
-                        print("Resultado: Victoria para", Enemigo_digipaimon.nombre)
-                        break
-            
+            for i in range(len(jugador.lista_digipaimon)):
+                jugador_digipymon = jugador.lista_digipaimon[i]
+                enemigo_digipymon = enemigo.lista_digipaimon[i]
+                print("Tu Digipymon:", jugador_digipymon)
+                print("Digipymon enemigo:", enemigo_digipymon)
+                if jugador_digipymon.ataque > enemigo_digipymon.ataque:
+                    print("¡Ganaste el combate!")
+                    jugador_digipymon.vida -= jugador_digipymon.ataque - enemigo_digipymon.ataque
+                    if jugador_digipymon.vida <= 0:
+                        jugador_digipymon.vida = 0
+                        print("Tu Digipymon ha perdido toda su vida.")
+                    victorias += 1
+                elif jugador_digipymon.ataque < enemigo_digipymon.ataque:
+                    print("Perdiste el combate.")
+                    jugador_digipymon.vida -= enemigo_digipymon.ataque - jugador_digipymon.ataque
+                    if jugador_digipymon.vida <= 0:
+                        jugador_digipymon.vida = 0
+                        print("Tu Digipymon ha perdido toda su vida.")
+                    derrotas += 1
+                else:
+                    print("Empate.")
             if victorias > derrotas:
-                print("¡Has ganado el combate!")
+                jugador.digicoins += victorias
+                print("¡Has ganado el combate! Obtienes ", victorias, " Digicoins")
             elif derrotas > victorias:
-                print("¡Has perdido el combate!")
+                    if jugador.digicoins >= derrotas:
+                        jugador.digicoins -= derrotas                
+                        print("¡Has perdido el combate! Pierdes ", derrotas, " Digicoins")
+                    else:
+                        jugador.digicoins = 0
+                        print("Has perdido la batalla y has perdido todos tus Digicoins.")
             else:
                 print("El combate terminó en empate.")
         
         elif respuesta == "No":
             print("¡Has decidido huir!")
-            Jugador.digicoins -= 1
-            if Jugador.digicoins < 0:
-                Jugador.digicoins = 0
+            jugador.digicoins -= 1
+            if jugador.digicoins < 0:
+                jugador.digicoins = 0
                 print("No tienes suficientes Digicoins para continuar jugando.")
         else:
             print("Por favor, responde 'Yes' o 'No'.")
@@ -134,10 +142,12 @@ class Main:
 
 
 
-    def digishop(self, jugador, inventario):
+def digishop(jugador, inventario):
+        jugador = Jugador()
+        inventario = Inventario()
         print("Bienvenido al Digishop:")
         print("Catálogo:")
-        print("a. Digipyballs: 5 digicoins")
+        print("a. Digipaiballs: 5 digicoins")
         print("b. Pocion: 3 digicoins (restaura 10p de vida)")
         print("c. Anabolizantes: 4 digicoins (aumenta 5p de ataque)")
 
@@ -167,7 +177,10 @@ class Main:
             print("Opción no válida.")
 
 
-    def usar_item(self, jugador, inventario, digipaimon):
+def usar_item(jugador, inventario, digipaimon):
+        inventario = Inventario()
+        jugador = Jugador()
+        digipaimon = Digipaimon()
         print("Inventario:")
         inventario.consultar_inventario()
         item = input("¿Qué ítem deseas usar?")
@@ -180,35 +193,34 @@ class Main:
                         print("Has usado una poción. La vida de tu Digipaimon se ha restaurado.")                       
                     else:
                         print("Todos tus Digipaimons tienen vida completa, no puedes usar una poción.")
-        elif item == "b" and "Digipyball" in inventario.objetos:
-                print(" No puedes Usar Digipyball")  
+        elif item == "b" and "Digipaiball" in inventario.objetos:
+                print(" No puedes Usar Digipaiball")  
         else:
                 print("No tienes ese ítem en tu inventario o has ingresado una opción inválida.")
 
-def main(jugador):
+def main():
+    inventario = Inventario()
+    jugador = Jugador()
+
     print("¡Bienvenido a Teyvat, un increíble mundo donde habitan las Digipaimon!")
     print("En este emocionante juego, te embarcarás en una aventura por las 7 regiones para convertirte en el viajero que salvará al mundo mientras conoces a estas tiernas haditas que reaccionan a los elementos.")
     print("Hola, soy Aether, un viajero milenario que ha rondado Teyvat una y otra vez a lo largo de las eras. Cómo viejo habitante de este mundo, he dedicado mi vida a conocer a estas criaturas a lo largo de mis aventuras")
     print("Y ahora, igual que yo hace tiempo por la primera Paimon, te encuentro en esta playa, preparado para comenzar tu aventura Digipaimon")
     print("Déjame conocer un poco más sobre tí, ¿Cómo te llamas? ")
-    nombre_jugador = input()
-    Jugador.nombre = nombre_jugador
-    print("¡¿Con qué te llamas?! ", nombre_jugador, " Yo me solía llamar así también antes de encontrar a mi hermana y recordar mi verdadero nombre")
+    jugador.nombre = input()
+    print("¡¿Con qué te llamas?! ", jugador.nombre, " Yo me solía llamar así también antes de encontrar a mi hermana y recordar mi verdadero nombre")
     print("En este paquete inicial que te voy a entregar, encontrarás 3 Digipaiballs y una poción para curar a tus Digipaimon durante los combates.")
     print("Este paquete te será de gran ayuda mientras exploras el mundo de los Digipaimon y te enfrentas a desafíos emocionantes.")
-    jugador.digicoins = 10
+    Jugador.digicoins = 10
     
-    # Genera un Digipymon aleatorio para el jugador
-    primer_digipymon = Main().generar_digipymon_aleatorio()
-    jugador.añadir_digipaimon(primer_digipymon)
-    print("Has encontrado a un Digipymon llamado {} y se ha unido a tu equipo.".format(primer_digipymon.nombre))
+    # Genera un Digipymon aleatorio
+    primer_digipymon = generar_digipymon_aleatorio()
+    Jugador.añadir_digipaimon(primer_digipymon)
+    print("Has encontrado a un Digipymon llamado ", primer_digipymon," y se ha unido a tu equipo.")
     
-    # Recibes inicialmente 3 Digipyballs y una Poción
-    inventario = Inventario()
+    # Recibes al principiop 3 Digipyballs y una Poción
     inventario.añadir_objeto("Digipyball", 3)
     inventario.añadir_objeto("Pocion", 1)
     print("Has recibido 3 Digipyballs y una Poción.")
-    print("Tu Digipaimon:", primer_digipymon)
-    while True:
-        Main().menu(jugador, inventario)
+    print("Tu Digipaimon:", generar_digipymon_aleatorio())
 main()    
