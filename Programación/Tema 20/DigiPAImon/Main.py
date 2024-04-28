@@ -1,4 +1,5 @@
 import random
+import time
 from Digipaimon import Digipaimon
 from Enemigo import Enemigo
 from Jugador import Jugador
@@ -36,7 +37,7 @@ def menu(jugador, inventario):
             usar_item(jugador, inventario)
         elif opcion == "5":
             inventario.consultar_inventario()
-            print("También tienes", jugador.digicoins, "Digicoins")
+            print(f"También tienes {jugador.digicoins} Digicoins")
         elif opcion == "6":
             jugador.consultar_digipaimon()
         elif opcion == "7":
@@ -59,18 +60,22 @@ def menu(jugador, inventario):
 def buscar_digipaimon(jugador, inventario):
     digipaimon = generar_digipaimon_aleatorio()
 
+    print("Buscando Digipaimon...")
+    time.sleep(2)
     print("Digipaimon encontrado:")
     print(digipaimon)
 
     probabilidad_captura = 100 - (digipaimon.nivel * 10)
-    print("Probabilidad de captura:", probabilidad_captura, "%")
+    print(f"Probabilidad de captura: {probabilidad_captura}%")
 
     if "Digipaiball" not in inventario.objetos or jugador.cantidad_digipaimon >= 6:
         print("No puedes capturar al Digipaimon porque no tienes suficientes Digipaiballs o espacio en tu equipo.")
         return
 
     opcion = input("¿Quieres intentar capturar al Digipaimon?")
-    if opcion == "Yes":
+    if opcion.lower() == "yes":
+        print("Capturando Digipaimon...")
+        time.sleep(2)
         if random.randint(0, 100) < probabilidad_captura:
             print("¡Has capturado al Digipaimon!")
             jugador.añadir_digipaimon(digipaimon)
@@ -78,13 +83,15 @@ def buscar_digipaimon(jugador, inventario):
         else:
             print("Has fallado al intentar capturar al Digipaimon.")
             inventario.usar_objeto("Digipaiball", 1)
-    elif opcion == "No":
+    elif opcion.lower() == "no":
         print("Has huido.")
     else:
         print("Opción no válida. Por favor, responde Yes o No.")
 
 def combate(jugador):
     enemigo = Enemigo(ListaNombres().obtener_nombres_entrenadores())
+    print("Buscando un entrenador para combatir...")
+    time.sleep(2)
     print("Has encontrado un Hilichurl:", enemigo.nombre)    
 
     for i in range(jugador.cantidad_digipaimon):
@@ -97,16 +104,17 @@ def combate(jugador):
     print("¿Quieres enfrentarlo?")
     respuesta = input()
 
-    if respuesta == "Yes":
-        print("¡Te vas a enfrentar al contrincante", enemigo.nombre, "!")
-            
+    if respuesta.lower() == "yes":
+        print(f"¡Te vas a enfrentar al contrincante {enemigo.nombre}!")
+        time.sleep(2)
+
         victorias = 0
         derrotas = 0
                     
         for i in range(len(jugador.lista_digipaimon)):
             jugador_digipaimon = jugador.lista_digipaimon[i]
             if jugador_digipaimon.vida == 0:
-                print(jugador_digipaimon.nombre, "no puede combatir porque no tiene vida.")
+                print(f"{jugador_digipaimon.nombre} no puede combatir porque no tiene vida.")
                 continue  
 
             enemigo_digipaimon = enemigo.lista_digipaimon[i]
@@ -131,11 +139,11 @@ def combate(jugador):
 
         if victorias > derrotas:
             jugador.digicoins += victorias
-            print("¡Has ganado la batalla! Obtienes", victorias, "Digicoins")
+            print(f"¡Has ganado la batalla! Obtienes {victorias} Digicoins")
         elif victorias < derrotas:
             if jugador.digicoins >= derrotas:
                 jugador.digicoins -= derrotas
-                print("¡Has perdido la batalla! Pierdes", derrotas, "Digicoins")
+                print(f"¡Has perdido la batalla! Pierdes {derrotas} Digicoins")
             else:
                 jugador.digicoins = 0
                 print("Has perdido la batalla y has perdido todos tus Digicoins.")
@@ -143,7 +151,7 @@ def combate(jugador):
             print("El combate terminó en empate.")
 
                 
-    elif respuesta == "No":
+    elif respuesta.lower() == "no":
         jugador.digicoins -= 1
         if jugador.digicoins < 0:
             jugador.digicoins = 0
@@ -154,6 +162,8 @@ def combate(jugador):
     else:
         print("Por favor, responde 'Yes' o 'No'.")
 
+    time.sleep(2)
+
 def digishop(jugador, inventario):
     print("Bienvenido al Digishop:")
     print("Catálogo:")
@@ -162,21 +172,21 @@ def digishop(jugador, inventario):
     print("c. Anabolizantes: 4 digicoins (aumenta 5p de ataque)")
 
     opcion = input("¿Qué ítem deseas comprar?: ")
-    if opcion == "Digipaiball":
+    if opcion.lower() == "digipaiball":
         if jugador.digicoins >= 5:
             jugador.digicoins -= 5
             inventario.añadir_objeto("Digipaiball", 5)
             print("Has comprado 5 Digipaiball.")
         else:
             print("No tienes suficientes Digicoins para comprar Digipaiball.")
-    elif opcion == "Pocion":
+    elif opcion.lower() == "pocion":
         if jugador.digicoins >= 3:
             jugador.digicoins -= 3
             inventario.añadir_objeto("Pocion", 1)
             print("Has comprado una Poción.")
         else:
             print("No tienes suficientes Digicoins para comprar una Poción.")
-    elif opcion == "Anabolizantes":
+    elif opcion.lower() == "anabolizantes":
         if jugador.digicoins >= 4:
             jugador.digicoins -= 4
             inventario.añadir_objeto("Anabolizantes", 1)
@@ -186,39 +196,43 @@ def digishop(jugador, inventario):
     else:
         print("Opción no válida.")
 
+    time.sleep(2)
+
 def usar_item(jugador, inventario):
     print("Inventario:")
     inventario.consultar_inventario()
     item = input("¿Qué ítem deseas usar? ")
 
-    if item == "Pocion" and "Pocion" in inventario.objetos:
+    if item.lower() == "pocion" and "Pocion" in inventario.objetos:
         print("Elige el Digipaimon en el que deseas usar la Poción:")
         jugador.consultar_digipaimon()
         indice_digipaimon = int(input("Ingresa el número del Digipaimon: ")) - 1
 
         if 0 <= indice_digipaimon < len(jugador.lista_digipaimon):
             jugador.lista_digipaimon[indice_digipaimon].vida += 10
-            print("Se ha usado la Poción en", jugador.lista_digipaimon[indice_digipaimon].nombre)
-            print("La vida de", jugador.lista_digipaimon[indice_digipaimon].nombre, "ha sido restaurada a", jugador.lista_digipaimon[indice_digipaimon].vida)
+            print(f"Se ha usado la Poción en {jugador.lista_digipaimon[indice_digipaimon].nombre}")
+            print(f"La vida de {jugador.lista_digipaimon[indice_digipaimon].nombre} ha sido restaurada a {jugador.lista_digipaimon[indice_digipaimon].vida}")
             inventario.usar_objeto("Pocion", 1)
         else:
             print("Número de Digipaimon no válido.")
-    elif item == "Digipaiball":
+    elif item.lower() == "digipaiball":
         print("No puedes usar Digipaiball.")
-    elif item == "Anabolizantes" and "Anabolizantes" in inventario.objetos:
+    elif item.lower() == "anabolizantes" and "Anabolizantes" in inventario.objetos:
         print("Elige el Digipaimon en el que deseas usar los Anabolizantes:")
         jugador.consultar_digipaimon()
         indice_digipaimon = int(input("Ingresa el número del Digipaimon: ")) - 1
 
         if 0 <= indice_digipaimon < len(jugador.lista_digipaimon):
             jugador.lista_digipaimon[indice_digipaimon].ataque += 5
-            print("Se han usado los Anabolizantes en", jugador.lista_digipaimon[indice_digipaimon].nombre)
-            print("El ataque de", jugador.lista_digipaimon[indice_digipaimon].nombre, "ha sido aumentado a", jugador.lista_digipaimon[indice_digipaimon].ataque)
+            print(f"Se han usado los Anabolizantes en {jugador.lista_digipaimon[indice_digipaimon].nombre}")
+            print(f"El ataque de {jugador.lista_digipaimon[indice_digipaimon].nombre} ha sido aumentado a {jugador.lista_digipaimon[indice_digipaimon].ataque}")
             inventario.usar_objeto("Anabolizantes", 1)
         else:
             print("Número de Digipaimon no válido.")
     else:
         print("No tienes ese ítem en tu inventario o has ingresado una opción inválida.")
+
+    time.sleep(2)
 
 def main():
     inventario = Inventario()
@@ -230,7 +244,7 @@ def main():
     print("Déjame conocer un poco más sobre tí, ¿Cómo te llamas? ")
     nombre_jugador = input()
     jugador = Jugador(nombre_jugador)  # Pasar el nombre del jugador al constructor
-    print("¡¿Con qué te llamas?! ", nombre_jugador , " Yo me solía llamar así también antes de encontrar a mi hermana y recordar mi verdadero nombre")
+    print(f"¡¿Con qué te llamas?! {nombre_jugador}, Yo me solía llamar así también antes de encontrar a mi hermana y recordar mi verdadero nombre")
     print("En este paquete inicial que te voy a entregar, encontrarás 3 Digipaiballs y una poción para curar a tus Digipaimon durante los combates.")
     print("Este paquete te será de gran ayuda mientras exploras el mundo de los Digipaimon y te enfrentas a desafíos emocionantes.")
     jugador.digicoins = 10
@@ -238,13 +252,13 @@ def main():
     # Genera un Digipaimon aleatorio
     primer_digipaimon = generar_digipaimon_aleatorio()
     jugador.añadir_digipaimon(primer_digipaimon)
-    print("Has encontrado a un Digipaimon llamado ", primer_digipaimon," y se ha unido a tu equipo.")
+    print(f"Has encontrado a un Digipaimon llamado {primer_digipaimon} y se ha unido a tu equipo.")
     
     # Recibes al principio 3 Digipaiballs y una Poción
     inventario.añadir_objeto("Digipaiball", 3)
     inventario.añadir_objeto("Pocion", 1)
     print("Has recibido 3 Digipaiball y una Poción.")
-    print("Tu Digipaimon:", primer_digipaimon)
+    print(f"Tu Digipaimon: {primer_digipaimon}")
     
     # Inicia el menú del juego
     menu(jugador, inventario)
