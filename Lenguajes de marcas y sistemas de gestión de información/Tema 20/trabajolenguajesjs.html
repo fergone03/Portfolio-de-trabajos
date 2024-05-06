@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Números</title>
   <style>
     table {
@@ -54,9 +53,10 @@
     }
 
     function actualizarTabla(numeros) {
+      document.getElementById('tabla').innerHTML = tablaHTML;
       let tablaHTML = '<table>';
       for (let num of numeros) {
-        tablaHTML += '<tr>';
+        tablaHTML += '<tr>'; 
         let esPrimo = esNumeroPrimo(num);
         let clase = (num % 2 !== 0) ? 'impar' : 'par';
         if (esPrimo) {
@@ -67,7 +67,6 @@
       }
       tablaHTML += '</table>';
       tablaHTML += `<div class="leyenda">Tabla Original</div>`;
-      document.getElementById('tabla').innerHTML = tablaHTML;
     }
 
     function esNumeroPrimo(numero) {

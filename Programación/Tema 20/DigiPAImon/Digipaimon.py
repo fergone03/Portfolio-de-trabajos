@@ -8,5 +8,5 @@ class Digipaimon:
         self.nivel = nivel    # Nivel del Digipaimon
         
     def __str__(self):
-        # Devuelve una representación en cadena del Digipaimon
+        # Devuelve un toString del Digipaimon
         return f"Nombre: {self.nombre}, vida: {self.vida}, ataque: {self.ataque}, tipo: {self.tipo}, nivel: {self.nivel}"

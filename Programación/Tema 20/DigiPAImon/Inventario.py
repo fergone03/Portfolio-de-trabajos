@@ -1,11 +1,11 @@
-from Jugador import Jugador  # Importa la clase Jugador desde un módulo externo
+from Jugador import Jugador  # Importa la clase Jugador
 
 class Inventario:
     def __init__(self):
         self.objetos = {}  # Inicializa un diccionario para almacenar los objetos y sus cantidades
 
     def añadir_objeto(self, nombre, cantidad):
-        # Agrega un objeto al inventario o incrementa su cantidad si ya existe
+        # Añade un objeto al inventario o aumenta su cantidad si ya existe
         if nombre in self.objetos:
             self.objetos[nombre] += cantidad
         else:
@@ -20,7 +20,7 @@ class Inventario:
                 del self.objetos[nombre]  # Elimina el objeto del inventario si se agota
 
     def consultar_inventario(self):
-        # Muestra el contenido del inventario, listando los objetos y sus cantidades
+        # Muestra tu inventario, haciendo una lista  de los objetos y sus cantidades
         print("Inventario:")
         for objeto, cantidad in self.objetos.items():
             print(f"{objeto}: {cantidad}")    
