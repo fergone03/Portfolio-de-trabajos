@@ -1,20 +1,22 @@
 import random
 import time
-from Digipaimon import Digipaimon
-from Enemigo import Enemigo
-from Jugador import Jugador
-from ListaNombres import ListaNombres
-from Inventario import Inventario
+from Digipaimon import Digipaimon  # Importación de la clase Digipaimon
+from Enemigo import Enemigo  # Importación de la clase Enemigo
+from Jugador import Jugador  # Importación de la clase Jugador
+from ListaNombres import ListaNombres  # Importación de la clase ListaNombres
+from Inventario import Inventario  # Importación de la clase Inventario
 
 def generar_digipaimon_aleatorio():
+    # Función para generar un Digipaimon aleatorio con atributos aleatorios.
     vida = random.randint(10, 20)
     ataque = random.randint(1, 10)
     nivel = random.randint(1, 3)
-    tipo = random.choice(["fuego", "agua", "planta"])
-    nombre = ListaNombres().obtener_nombre_digipaimon()
+    tipo = random.choice(["fuego", "agua", "planta"])  # Elección aleatoria del tipo de Digipaimon
+    nombre = ListaNombres().obtener_nombre_digipaimon()  # Obtención de un nombre aleatorio de la lista de nombres
     return Digipaimon(nombre, vida, ataque, tipo, nivel)
 
 def menu(jugador, inventario):
+    # Función que muestra el menú del juego y maneja las opciones del jugador.
     while True:
         print("Menu:")
         print("1. Buscar Digipaimon")
@@ -25,8 +27,9 @@ def menu(jugador, inventario):
         print("6. Consultar digipaimons")
         print("7. Salir")
 
-        opcion = input("Elige una opción: ")
+        opcion = input("Elige una opción: ") #Para evitar usar prints de más, escribo líneas en los input.
 
+        # Manejo de las diferentes opciones del menú
         if opcion == "1":
             buscar_digipaimon(jugador, inventario)
         elif opcion == "2":
@@ -45,11 +48,9 @@ def menu(jugador, inventario):
             break
         else:
             print("Opción no válida. Por favor, elige una opción del 1 al 7.")
-        digipaimones_con_vida = False
-        for digipaimon in jugador.lista_digipaimon:
-            if digipaimon.vida > 0:
-                digipaimones_con_vida = True
-                break
+
+        # Verificación de la existencia de Digipaimons con vida y suficientes Digicoins
+        digipaimones_con_vida = any(digipaimon.vida > 0 for digipaimon in jugador.lista_digipaimon)
         if not digipaimones_con_vida:
             print("Todos tus Digipaimons han sido derrotados. ¡Has perdido!")
             break
@@ -58,6 +59,7 @@ def menu(jugador, inventario):
             break
 
 def buscar_digipaimon(jugador, inventario):
+    # Función para buscar y posiblemente capturar un Digipaimon.
     digipaimon = generar_digipaimon_aleatorio()
 
     print("Buscando Digipaimon...")
@@ -96,6 +98,7 @@ def buscar_digipaimon(jugador, inventario):
         time.sleep(1)
 
 def combate(jugador):
+    # Función para simular un combate entre el jugador y un enemigo.
     enemigo = Enemigo(ListaNombres().obtener_nombres_entrenadores())
     print("Buscando un entrenador para combatir...")
     time.sleep(1)
@@ -154,6 +157,7 @@ def combate(jugador):
                 print("Empate.")
                 time.sleep(1)
 
+        # Manejo de las victorias y derrotas del jugador
         if victorias > derrotas:
             jugador.digicoins += victorias
             print(f"¡Has ganado la batalla! Obtienes {victorias} Digicoins")
@@ -184,11 +188,12 @@ def combate(jugador):
         time.sleep(1)
 
 def digishop(jugador, inventario):
+    # Función para simular la tienda del juego.
     print("Bienvenido al Digishop:")
     print("Catálogo:")
-    print("a. Digipaiballs: 5 digicoins")
-    print("b. Pocion: 3 digicoins (restaura 10p de vida)")
-    print("c. Anabolizantes: 4 digicoins (aumenta 5p de ataque)")
+    print("Digipaiballs: 5 digicoins")
+    print("Poción: 3 digicoins (restaura 10p de vida)")
+    print("Anabolizantes: 4 digicoins (aumenta 5p de ataque)")
     
     time.sleep(1)
     opcion = input("¿Qué ítem deseas comprar?: ")
@@ -222,10 +227,9 @@ def digishop(jugador, inventario):
     time.sleep(1)
 
 def usar_item(jugador, inventario):
-    print("Inventario:")
-    time.sleep(1)
+    # Función para simular el uso de objetos del inventario.
     inventario.consultar_inventario()
-    item = input("¿Qué ítem deseas usar? ")
+    item = input("¿Qué item deseas usar? ")
 
     if item.lower() == "pocion" and "Pocion" in inventario.objetos:
         print("Elige el Digipaimon en el que deseas usar la Poción:")
@@ -267,8 +271,10 @@ def usar_item(jugador, inventario):
     time.sleep(1)
 
 def main():
+    # Función principal que inicia el juego.
     inventario = Inventario()
     
+    # Mensaje de bienvenida y creación del jugador
     print("¡Bienvenido a Teyvat, un increíble mundo donde habitan las Digipaimon!")
     time.sleep(1)
     print("En este emocionante juego, te embarcarás en una aventura por las 7 regiones para convertirte en el viajero que salvará al mundo mientras conoces a estas tiernas haditas que reaccionan a los elementos.")
@@ -280,7 +286,7 @@ def main():
     print("Déjame conocer un poco más sobre tí, ¿Cómo te llamas? ")
     time.sleep(1)
     nombre_jugador = input()
-    jugador = Jugador(nombre_jugador)  # Pasar el nombre del jugador al constructor
+    jugador = Jugador(nombre_jugador)  # Creación del jugador con el nombre ingresado
     print(f"¡¿Con qué te llamas?! {nombre_jugador}, Yo me solía llamar así también antes de encontrar a mi hermana y recordar mi verdadero nombre")
     time.sleep(1)    
     print("En este paquete inicial que te voy a entregar, encontrarás 3 Digipaiballs y una poción para curar a tus Digipaimon durante los combates.")
@@ -288,7 +294,7 @@ def main():
     print("Este paquete te será de gran ayuda mientras exploras el mundo de los Digipaimon y te enfrentas a desafíos emocionantes.")
     jugador.digicoins = 10
     time.sleep(1)    
-    # Genera un Digipaimon aleatorio
+    # Generación y aumento de un Digipaimon aleatorio al equipo del jugador
     primer_digipaimon = generar_digipaimon_aleatorio()
     jugador.añadir_digipaimon(primer_digipaimon)
     print(f"Has encontrado a un Digipaimon llamado {primer_digipaimon} y se ha unido a tu equipo.")

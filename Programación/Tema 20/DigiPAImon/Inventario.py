@@ -1,3 +1,4 @@
+import time
 from Jugador import Jugador  # Importa la clase Jugador
 
 class Inventario:
@@ -22,5 +23,6 @@ class Inventario:
     def consultar_inventario(self):
         # Muestra tu inventario, haciendo una lista  de los objetos y sus cantidades
         print("Inventario:")
+        time.sleep(1)
         for objeto, cantidad in self.objetos.items():
             print(f"{objeto}: {cantidad}")    
