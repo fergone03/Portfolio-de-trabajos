@@ -77,9 +77,14 @@ form {
   background: rgba(217, 203, 167, 1);
   font-family: Ubuntu;
 }
+.imgmugis {
+  display: none;
+}
 .manolo {
-  width: 10vh;
+  max-width: 70px;
+  height: auto;
   position: absolute;
+  min-width: 70px;
 }
 button {
   background-color: black;
@@ -104,7 +109,7 @@ button {
   display: inline-block;
   margin: 25px 0px;
   width: 15%;
-  margin-left: 43%;
+  margin-left: 42%;
 }
 .formInputNombre {
   display: inline-block;
@@ -113,7 +118,7 @@ button {
   margin-left: 31%;
 }
 .formInputFecha {
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 label {
