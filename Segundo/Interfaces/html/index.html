@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body> 
+    <div class="header">
+        <h1>Lágrimas & Co.</h1>
+        <h3>Porque la llorería está igual de llena que el infierno
+        </h3>
+    </div>
+    <div class="contenido">
+       <div class="wrap">
+        <form>
+        <label for="email">Introduce tu e-mail:</label>
+        <input type="email" class="formInput" id="email" size="30" required />
+        <label for="name" >Introduce tu nombre:</label>
+        <input type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]" id="name"class="formInputNombre" name="name" required minlength="3" maxlength="10" size="10" onkeydown="return /[a-z]/i.test(event.key)" />
+        <label for="years" pattern="[a-9]">¿Cúantos años tienes?:</label>
+        <input type="number" id="years" class="formInputYears"name="years" min="1" max="100" />
+        <div>
+            Usuario: <input class="formInput" name="nickname">
+          </div>
+          <label for="text">Desahógate:</label>
+          <label class="mingo">Nadie te va a leer pero vamos,
+            <br>tú como si lo hiciera</label>
+          <textarea name="text" cols="32" rows="8">Escribe tus pensamientos más profundos</textarea>
+        </form>
+        <button>Enviar</button>
+        </div>
+    </div>
+    <footer>
+        <div class="creator-container">
+            <h5 class="coco">©Derechos reservados por la Universidad de Misco</h5>
+          </div>
+        
+    </footer>
+</body>

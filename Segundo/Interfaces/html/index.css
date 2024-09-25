@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-image: url("src/media/imgs/llanto004.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  background-color: #405cf5;
+  text-align: center;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  position: relative;
+  height: 6vh;
+  width: 100%;
+  background-color: #405cf5;
+}
+.coco {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding-right: 30px;
+}
+form {
+  margin-top: 5%;
+  padding: 10px;
+  border: 1px solid #d3d3d3;
+  background-color: gray;
+  border-radius: 8px;
+}
+button {
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  cursor: pointer;
+  height: 44px;
+  margin: 12px 0 0;
+  text-align: center;
+  width: 20%;
+  color: #fff;
+  margin-left: 80%;
+  margin-bottom: 20px;
+}
+
+.formInput {
+  display: block;
+  margin: 25px 0px;
+  width: 100%;
+}
+.formInputYears {
+  display: inline-block;
+  margin: 25px 0px;
+  width: 15%;
+  margin-left: 44%;
+}
+.formInputNombre {
+  display: inline-block;
+  margin: 25px 0px;
+  width: 50%;
+  margin-left: 25%;
+}
+label {
+  display: block;
+  text-align: center;
+}
+.mingo {
+  padding-bottom: 5%;
+}
