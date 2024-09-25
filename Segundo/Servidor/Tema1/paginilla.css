@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+#container {
+  height: 400px;
+  width: 400px;
+  background-color: white;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.xd1 {
+  background-color: white;
+  width: 90%;
+  font-size: 12px;
+  border: 2px solid #ccc;
+  margin: auto;
+  top: 50%;
+  bottom: 50%;
+  position: relative;
+}
