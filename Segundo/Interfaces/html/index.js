@@ -5,3 +5,12 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   document.getElementById("Bomboclat").innerHTML =
     "¡Luffy se ha salvado gracias a tí!";
 });
+document.getElementById("submitBtn").addEventListener("click", function() {
+    var inputValue = document.getElementById("card").value;
+
+    if (inputValue.trim() === "") {
+        alert("Please fill out the input field.");
+    } else {
+        alert("Input submitted: " + inputValue);
+    }
+});
