@@ -16,12 +16,17 @@
 html,
 body {
   height: 100%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
+
 body {
   background-image: url("src/media/imgs/c.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  flex-grow: 1;
 }
 .maroto {
   display: flex;
@@ -36,36 +41,35 @@ body {
 }
 .header {
   background-image: url("src/media/imgs/fondoheader.jpg");
-  border: none;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  margin: 0;
-  padding: 0;
-  height: 10vh;
   text-align: center;
   font-family: OnePieceManga;
   border-bottom: solid rgb(83, 78, 65);
+  height: 10vh;
+  margin: 0;
 }
 
 .contenido {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
+  padding: 20px;
 }
-
-footer {
+.footer {
   background-image: url("src/media/imgs/fondoheader.jpg");
   border-top: solid rgb(83, 78, 65);
-  position: relative;
   height: 10vh;
   width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
 }
 .coco {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  color: solid rgb(83, 78, 65);
-  padding-right: 30px;
+  color: rgb(83, 78, 65);
 }
 form {
   width: 70%;
@@ -181,4 +185,47 @@ div.maroto {
 .botones {
   margin-top: 1%;
   margin-bottom: 1%;
+}
+@media (max-height: 700px) {
+  .footer {
+    height: 10vh;
+    padding-right: 20px;
+  }
+
+  .header {
+    height: 8vh;
+  }
+
+  .contenido {
+    padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    height: 6vh;
+    justify-content: center;
+    padding-right: 10px;
+  }
+
+  .header {
+    height: 8vh;
+  }
+
+  .contenido {
+    padding: 5px;
+    flex-direction: column;
+  }
+
+  button {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .formInput,
+  .formInputNombre,
+  .formInputYears,
+  .formInputFecha {
+    width: 100%;
+    margin-left: 0;
+  }
 }
