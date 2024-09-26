@@ -60,13 +60,14 @@ body {
 .footer {
   background-image: url("src/media/imgs/fondoheader.jpg");
   border-top: solid rgb(83, 78, 65);
-  height: 10vh;
+  min-height: 10vh; /* Ensures the footer has at least this height */
   width: 100%;
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 30px;
+  flex-shrink: 0; /* Ensures the footer won't shrink */
 }
 .coco {
   color: rgb(83, 78, 65);
@@ -186,23 +187,9 @@ div.maroto {
   margin-top: 1%;
   margin-bottom: 1%;
 }
-@media (max-height: 700px) {
-  .footer {
-    height: 10vh;
-    padding-right: 20px;
-  }
-
-  .header {
-    height: 8vh;
-  }
-
-  .contenido {
-    padding: 10px;
-  }
-}
 @media (max-width: 600px) {
   .footer {
-    height: 6vh;
+    min-height: 15vh; /* Allow footer to grow on small screens */
     justify-content: center;
     padding-right: 10px;
   }
@@ -221,10 +208,7 @@ div.maroto {
     margin-left: 5%;
   }
 
-  .formInput,
-  .formInputNombre,
-  .formInputYears,
-  .formInputFecha {
+  .formInput, .formInputNombre, .formInputYears, .formInputFecha {
     width: 100%;
     margin-left: 0;
   }
