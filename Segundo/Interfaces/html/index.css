@@ -60,14 +60,14 @@ body {
 .footer {
   background-image: url("src/media/imgs/fondoheader.jpg");
   border-top: solid rgb(83, 78, 65);
-  min-height: 10vh; /* Ensures the footer has at least this height */
+  min-height: 10vh; 
   width: 100%;
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 30px;
-  flex-shrink: 0; /* Ensures the footer won't shrink */
+  flex-shrink: 0; 
 }
 .coco {
   color: rgb(83, 78, 65);
@@ -189,7 +189,7 @@ div.maroto {
 }
 @media (max-width: 600px) {
   .footer {
-    min-height: 15vh; /* Allow footer to grow on small screens */
+    min-height: 15vh; 
     justify-content: center;
     padding-right: 10px;
   }
