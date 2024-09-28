@@ -1,0 +1,176 @@
+@font-face {
+  font-family: OnePieceManga;
+  src: url(./src/fonts/one\ piece\ font.ttf);
+}
+@font-face {
+  font-family: Ubuntu;
+  src: url(./src/fonts/Ubuntu-Regular.ttf);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: OnePieceManga;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./src/FondoMundo.png");
+}
+
+.encabezado {
+  background-image: url("./src/fondoheader.jpg");
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center;
+  border-bottom: solid rgb(83, 78, 65);
+  height: 10vh;
+  margin: 0;
+}
+
+h1 {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botones-colores {
+  margin-top: 5%;
+  background-color: rgba(226, 197, 157, 0.732);
+  border: solid rgb(83, 78, 65);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 50%;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.barco-tsunny {
+    max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagen-ponferradina {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+.boton-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.boton-color button {
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.cuadro-amarillo,
+.cuadro-azul,
+.cuadro-rojo,
+.cuadro-blanco,
+.cuadro-negro,
+.cuadro-rosa,
+.cuadro-morado,
+.cuadro-verde,
+.cuadro-naranja,
+.cuadro-cyan {
+  width: 100px;
+  height: 100px;
+}
+
+.cuadro-amarillo {
+  background-color: #fecb00;
+}
+.cuadro-azul {
+  background-color: #00b7ff;
+}
+.cuadro-negro {
+  background-color: #000000;
+}
+.cuadro-blanco {
+  background-color: #ffffff;
+  border: #000000 1px solid;
+}
+.cuadro-rosa {
+  background-color: #ffc0cb;
+}
+.cuadro-morado {
+  background-color: #7a288a;
+}
+.cuadro-rojo {
+  background-color: #ff0000;
+}
+.cuadro-verde {
+  background-color: #008000;
+}
+.cuadro-cyan {
+  background-color: cyan;
+}
+.cuadro-naranja {
+  background-color: #ff4800;
+}
+
+.imagen-personaje {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imagen-personaje img {
+  max-width: 100%;
+  height: auto;
+  display: none; /* La imagen estará oculta hasta que se seleccione un personaje */
+}
+
+button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Ubuntu;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+
+span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}

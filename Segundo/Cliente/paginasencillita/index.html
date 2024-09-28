@@ -1,19 +1,64 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
-<div>
-    <h1>¿Qué personaje de One Piece serías según tu color favorito?</h1>
-    <button>Amarillo</button>
-    <button>Azul</button>
-    <button>Rojo</button>
-    <button>Blanco</button>
-    <button>Negro</button>
-    <button>Rosa</button>
-    <button>Morado</button>
-    <button>Verde</button>
-    <button>Naranja</button>
-    <button>Cyan</button>
-</div>    
+    <div class="encabezado">
+        <h1 id="titulo">¿Qué personaje de One Piece serías según tu color favorito?</h1>
+    </div>
+    
+    <div class="botones-colores" id="contenedor-botones">
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(1)">Amarillo</button>
+            <div class="cuadro-amarillo"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(2)">Azul</button>
+            <div class="cuadro-azul"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(3)">Rojo</button>
+            <div class="cuadro-rojo"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(4)">Blanco</button>
+            <div class="cuadro-blanco"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(5)">Negro</button>
+            <div class="cuadro-negro"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(6)">Rosa</button>
+            <div class="cuadro-rosa"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(7)">Morado</button>
+            <div class="cuadro-morado"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(8)">Verde</button>
+            <div class="cuadro-verde"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(9)">Naranja</button>
+            <div class="cuadro-naranja"></div>
+        </div>
+        <div class="boton-color">
+            <button onclick="mostrarPersonaje(0)">Cyan</button>
+            <div class="cuadro-cyan"></div>
+        </div>
+    </div> 
+
+    <div id="imagen-barco" class="barco-tsunny">
+        <img src="./src/TSunny.png">
+    </div>
+    
+    <div class="imagen-personaje">
+        <img id="imagenSeleccionada" src="" alt="Imagen del Personaje" class="imagen-ponferradina">
+    </div>
+
+    <script src="index.js"></script> 
 </body>
+</html>
