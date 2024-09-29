@@ -28,16 +28,22 @@ body {
   background-size: cover;
   flex-grow: 1;
 }
-.maroto {
+.botones {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;  
+  justify-content: center;  
+  flex-wrap: wrap; 
+}
+
+.opcionBanco {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   gap: 5px;
   padding: 0;
-  > input {
-    width: min-content;
-  }
+  margin: 0 10px;  
 }
 .header {
   background-image: url("src/media/imgs/fondoheader.jpg");
@@ -57,19 +63,19 @@ body {
   flex-grow: 1;
   padding: 20px;
 }
-.footer {
+.pieDePagina {
   background-image: url("src/media/imgs/fondoheader.jpg");
   border-top: solid rgb(83, 78, 65);
-  min-height: 10vh; 
+  min-height: 10vh;
   width: 100%;
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 30px;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
-.coco {
+.mensajeDerechos {
   color: rgb(83, 78, 65);
 }
 form {
@@ -82,10 +88,10 @@ form {
   background: rgba(217, 203, 167, 1);
   font-family: Ubuntu;
 }
-.imgmugis {
+.imagenMugis {
   display: none;
 }
-.manolo {
+.logo {
   max-width: 70px;
   height: auto;
   position: absolute;
@@ -105,24 +111,24 @@ button {
   margin-bottom: 20px;
 }
 
-.formInput {
+.entradaFormulario {
   display: block;
   margin: 25px 0px;
   width: 100%;
 }
-.formInputYears {
+.entradaCVV {
   display: inline-block;
   margin: 25px 0px;
   width: 15%;
   margin-left: 42%;
 }
-.formInputNombre {
+.entradaNombre {
   display: inline-block;
   margin: 25px 0px;
   width: 35%;
   margin-left: 31%;
 }
-.formInputFecha {
+.entradaFecha {
   margin-left: 35%;
 }
 
@@ -134,62 +140,17 @@ legend {
   display: block;
   text-align: center;
 }
-.mingo {
+.divOpcionBanco {
   padding-bottom: 5%;
 }
-div.maroto {
+.opcionBanco {
   height: 20px;
   margin-right: 0.8%;
 }
-.pedro {
-  height: 20px;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 0;
-  > input {
-    width: min-content;
-  }
-  margin-left: 3.2%;
-}
-.alfarius {
-  height: 20px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 0;
-  > input {
-    width: min-content;
-  }
-  margin-left: 1.6%;
-}
-.ronda {
-  height: 20px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  padding: 0;
-  > input {
-    width: min-content;
-  }
-  margin-left: 0.2%;
-}
-.botones {
-  margin-top: 1%;
-  margin-bottom: 1%;
-}
 @media (max-width: 600px) {
-  .footer {
-    min-height: 15vh; 
+  .pieDePagina {
+    min-height: 15vh;
     justify-content: center;
     padding-right: 10px;
   }
@@ -208,7 +169,10 @@ div.maroto {
     margin-left: 5%;
   }
 
-  .formInput, .formInputNombre, .formInputYears, .formInputFecha {
+  .entradaFormulario,
+  .entradaNombre,
+  .entradaCVV,
+  .entradaFecha {
     width: 100%;
     margin-left: 0;
   }

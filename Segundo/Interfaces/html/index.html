@@ -1,58 +1,58 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
     <link rel="stylesheet" href="index.css" />
 </head>
 <body> 
     <div class="header">
         <h1>The 
-        <img src="./src/media/imgs/One-Piece-Logo-PNG2.png" class="manolo" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-        Inmersive Experience</h1>
-        <h3 id="Bomboclat">¡Luffy ha sido atrapado en el País de Wano  y necesita tu ayuda!
-        </h3>
+        <img src="./src/media/imgs/One-Piece-Logo-PNG2.png" class="logo" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        Experiencia Inmersiva</h1>
+        <h3 id="mensajeAyuda">¡Luffy ha sido atrapado en el País de Wano y necesita tu ayuda!</h3>
     </div>
     <div class="contenido">
-       <div class="wrap">
-        <img src="./src/media/imgs/pngwing.com.png" class="imgmugis" id="myImage">
-        <form id="myForm">
+       <div class="envoltura">
+        <img src="./src/media/imgs/pngwing.com.png" class="imagenMugis" id="miImagen">
+        <form id="miFormulario">
             <legend>Selecciona tu banco para desplegar barcos hacia la isla:</legend>
             <div class="botones">
-            <div class="ronda">
-              <input type="radio" class="formInput" id="Imagin" name="Bank" />
-              <label for="Imagin">Imagin</label>
+                <div class="opcionBanco">
+                    <input type="radio" class="entradaFormulario" id="bancoImagin" name="Banco" />
+                    <label for="bancoImagin">Imagin</label>
+                </div>
+                
+                <div class="opcionBanco">
+                    <input type="radio" class="entradaFormulario" id="bancoBBVA" name="Banco" />
+                    <label for="bancoBBVA">BBVA</label>
+                </div>  
+                
+                <div class="opcionBanco">
+                    <input type="radio" class="entradaFormulario" id="bancoSantander" name="Banco" />
+                    <label for="bancoSantander">Santander</label>
+                </div>
+                
+                <div class="opcionBanco">
+                    <input type="radio" class="entradaFormulario" id="bancoSabadell" name="Banco" />
+                    <label for="bancoSabadell">Sabadell</label>
+                </div>
             </div>
-            
-            <div class="maroto">
-                <input type="radio" class="formInput" id="BBVA" name="Bank" />
-              <label for="BBVA">BBVA</label>
-            </div>  
-            
-            <div class="pedro">
-                <input type="radio" class="formInput" id="Santander" name="Bank" />
-              <label for="Santander">Santander</label>
-            </div>
-            
-            <div class="alfarius">
-                <input type="radio" class="formInput" id="Sabadell" name="Bank" />
-              <label for="Sabadell">Sabadell</label>
-            </div>
-        </div>
-        <label for="name" >Introduce el nombre tal y como viene en tu tarjeta para que Luffy sepa quién le está ayudando:</label>
-        <input type="text" required pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]" id="name"class="formInputNombre" name="name" minlength="3" maxlength="10" size="10" onkeydown="return /[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/i.test(event.key)" />
-        <label for="card" >La sangre Lunaria de King se está activando, <br>hora de demostrar de qué pasta está hecho un mugiwara,<br> teclea los números de tu tarjeta de débito para derrotarlo</label>
-        <input type="text" required placeholder="XXXX XXXX XXXX XXXX" id="card"class="formInputNombre" name="name" minlength="16" maxlength="16"/>
-        <label for="years">Rápido Kaido va a acabar con Luffy. Escribe el CVV de tu tarjeta para salvarlo :</label>
-        <input type="number" required id="years" placeholder="XXX" class="formInputYears"name="years" min="1" max="3" />
-        <label for="start">Solo queda introducir la fecha de caducidad de la tarjeta para escuchar el Gomu gomu no mi de un Luffy libre,sano y salvo</label>
-        <input type="month" required id="fecha" name="fecha" class="formInputFecha" min="2020-08" value="2020-10">
+            <label for="nombre">Introduce el nombre tal y como viene en tu tarjeta para que Luffy sepa quién le está ayudando:</label>
+            <input type="text" required pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" id="nombre" class="entradaNombre" name="nombre" minlength="3" maxlength="10" size="10" onkeydown="return /[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]/i.test(event.key)" />
+            <label for="numeroTarjeta">La sangre Lunaria de King se está activando, <br>hora de demostrar de qué pasta está hecho un mugiwara,<br> teclea los números de tu tarjeta de débito para derrotarlo</label>
+            <input type="text" required placeholder="XXXX XXXX XXXX XXXX" id="numeroTarjeta" class="entradaNombre" name="numeroTarjeta" minlength="16" maxlength="16"/>
+            <label for="cvv">Rápido Kaido va a acabar con Luffy. Escribe el CVV de tu tarjeta para salvarlo :</label>
+            <input type="number" required id="cvv" placeholder="XXX" class="entradaCVV" name="cvv" min="1" max="3" />
+            <label for="fechaCaducidad">Solo queda introducir la fecha de caducidad de la tarjeta para escuchar el Gomu gomu no mi de un Luffy libre, sano y salvo</label>
+            <input type="month" required id="fechaCaducidad" name="fechaCaducidad" class="entradaFecha" min="2020-08" value="2020-10">
         </form>
-        <button id="submitBtn">Yohohohohoho</button>
+        <button id="botonEnviar">Yohohohohoho</button>
         </div>
     </div>
-    <div class="footer">
-        <div class="creator-container">
-            <h5 class="coco">©Derechos reservados por la Universidad de Misco</h5>
-          </div>
-          <script src="index.js"></script>
-
+    <div class="pieDePagina">
+        <div class="creador">
+            <h5 class="mensajeDerechos">©Derechos reservados por la Universidad de Misco</h5>
+        </div>
+        <script src="index.js"></script>
     </div>
 </body>
+</html>
