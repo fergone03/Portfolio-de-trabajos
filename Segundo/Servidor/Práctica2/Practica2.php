@@ -17,11 +17,11 @@ $esVerdadero = false;
 $pi = 3.14; 
 
 
-$numeros = [
-  "valor1" => 1, 
-  "valor2" => 2, 
-  "valor3" => 3,
-];
+$numeros = array("valor1" => 1,  "valor2" => 2, "valor3" => 3, );
+  
+
+  
+
 
 echo "Saludo: " . $saludoCompleto . "<br>";
 echo "Es verdadero: " . ($esVerdadero) . "<br>";
