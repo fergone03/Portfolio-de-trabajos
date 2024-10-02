@@ -35,17 +35,19 @@ $numeros2 = array(1.5, 2.6, 3.7, 4.8);
 echo "La posición 0 es " . $numeros2[0] . "<br>";
 
 $valor1 = (isset($_GET["numero1"]) ? $_GET["numero1"] : '');
-$valor2 = (isset($_GET["numero2"]) ? $_GET["numero2"] : '');
 
-if ($valor1 == "") {
+if ($valor1 == "" ) {
     $valor1 = "Escribe algo";
 }
 
 echo 'Número 1= ' . $valor1 . "<br>";
-echo 'Número 2= ' . $valor2 . "<br>";
 
-$suma = $valor1 + $valor2;
-echo "La suma de ambos números es " . $suma . "<br>";
+$potencia = $valor1 * $valor1;
+echo "La potencia es " . $potencia . "<br>";
+$decima =$valor1/10;
+echo "La décima parte de ".$valor1." es ".$decima.".<br>";
+$intToString= strval($valor1)." Hola Mundo!";
+echo $intToString;
 
 ?>
 
