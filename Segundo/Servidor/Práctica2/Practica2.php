@@ -5,17 +5,9 @@
 </head>
 
 <body>
-<!DOCTYPE html>
-<html>
-
-<head>
-</head>
-
-<body>
 
 <?php
 
-// Existing variables
 $saludo1 = "Hola";
 $saludo2 = "Mundo";
 $saludoCompleto = $saludo1 . " " . $saludo2;
@@ -41,14 +33,19 @@ echo "Tiene " . strlen($longvar) . " carácteres.<br>";
 
 $numeros2 = array(1.5, 2.6, 3.7, 4.8);
 echo "La posición 0 es " . $numeros2[0] . "<br>";
-$valor1=1;
-$valor2=2;
-echo "Valor 1= ". $valor1. "<br>";
-echo "Valor 2= ". $valor2. "<br>";
 
-if (isset($_GET['numero'])) {
+$valor1 = (isset($_GET["numero1"]) ? $_GET["numero1"] : '');
+$valor2 = (isset($_GET["numero2"]) ? $_GET["numero2"] : '');
 
+if ($valor1 == "") {
+    $valor1 = "Escribe algo";
 }
+
+echo 'Número 1= ' . $valor1 . "<br>";
+echo 'Número 2= ' . $valor2 . "<br>";
+
+$suma = $valor1 + $valor2;
+echo "La suma de ambos números es " . $suma . "<br>";
 
 ?>
 
