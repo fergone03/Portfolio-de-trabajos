@@ -34,10 +34,10 @@ echo "Tiene " . strlen($longvar) . " carácteres.<br>";
 $numeros2 = array(1.5, 2.6, 3.7, 4.8);
 echo "La posición 0 es " . $numeros2[0] . "<br>";
 
-$valor1 = (isset($_GET["numero1"]) ? $_GET["numero1"] : '');
+$valor1 = $_GET["numero1"] ?? null;
 
 if ($valor1 == "" ) {
-    $valor1 = "Escribe algo";
+    $valor1 = "¡Escribe algo!";
 }
 
 echo 'Número 1= ' . $valor1 . "<br>";
@@ -46,8 +46,13 @@ $potencia = $valor1 * $valor1;
 echo "La potencia es " . $potencia . "<br>";
 $decima =$valor1/10;
 echo "La décima parte de ".$valor1." es ".$decima.".<br>";
-$intToString= strval($valor1)." Hola Mundo!";
+$intToString= strval($valor1)." Hola Mundo!<br>";
 echo $intToString;
+
+$tipoVariable = gettype($valor1);
+echo "La variable es de tipo ".$tipoVariable." con valor ".$valor1.".<br>";
+
+
 
 ?>
 
