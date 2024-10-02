@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 <?php
 
 // Existing variables
@@ -40,7 +41,14 @@ echo "Tiene " . strlen($longvar) . " carácteres.<br>";
 
 $numeros2 = array(1.5, 2.6, 3.7, 4.8);
 echo "La posición 0 es " . $numeros2[0] . "<br>";
+$valor1=1;
+$valor2=2;
+echo "Valor 1= ". $valor1. "<br>";
+echo "Valor 2= ". $valor2. "<br>";
 
+if (isset($_GET['numero'])) {
+
+}
 
 ?>
 
