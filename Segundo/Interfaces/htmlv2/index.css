@@ -1,0 +1,263 @@
+@font-face {
+  font-family: OnePieceManga;
+  src: url(./src/media/fonts/one\ piece\ font.ttf);
+}
+@font-face {
+  font-family: Ubuntu;
+  src: url(./src/media/fonts/Ubuntu-Regular.ttf);
+}
+@import url("./variable.css");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  cursor: all-scroll;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-image: url("src/media/imgs/c.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-grow: 1;
+}
+
+.contenedorBotones {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.opcionBanco {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  margin: 0 10px;
+}
+
+header {
+  background-image: url("src/media/imgs/fondoheader.jpg");
+  cursor: crosshair;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center;
+  font-family: OnePieceManga;
+  border-bottom: solid rgb(83, 78, 65);
+  height: 10vh;
+  margin: 0;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+footer {
+  background-image: url("src/media/imgs/fondoheader.jpg");
+  border-top: solid rgb(83, 78, 65);
+  min-height: 10vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  flex-shrink: 0;
+}
+
+.mensajeDerechos {
+  color: rgb(83, 78, 65);
+}
+
+form {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  padding: 10px;
+  border: 3px solid rgb(83, 78, 65);
+  border-radius: 8px;
+  background: rgba(217, 203, 167, 1);
+  font-family: Ubuntu;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.entradaFormulario {
+  width: 100%;
+}
+.entradaCVV {
+  width: 15%;
+}
+.entradaNombre,
+.entradaNumeroTarjeta {
+  width: 35%;
+}
+
+label {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.imagenMugiwara {
+  display: none;
+}
+
+.logo {
+  max-width: 70px;
+  height: auto;
+  position: absolute;
+  min-width: 70px;
+}
+
+button {
+  background-color: black;
+  border-radius: 6px;
+  border-width: 0;
+  cursor: pointer;
+  height: 44px;
+  margin: 12px 0 0;
+  text-align: center;
+  width: auto;
+  color: #fff;
+}
+
+.botonesExtras button {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.botonIcono {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconoBoton {
+  border: 1px solid black;
+  width: 10%;
+}
+
+.botonPulso {
+  background-color: #e74c3c;
+  transition: transform 0.1s ease-in-out;
+}
+
+.botonPulso:active {
+  transform: scale(0.9);
+}
+
+.botonSombra {
+  background-color: #2ecc71;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.botonSombra:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1000px) {
+  body {
+    background-image: none;
+    background-color: red;
+  }
+  footer {
+    min-height: 15vh;
+    justify-content: center;
+    padding-right: 10px;
+  }
+
+  header {
+    height: 8vh;
+  }
+
+  .contenido {
+    padding: 5px;
+    flex-direction: column;
+  }
+
+  button {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .entradaFormulario,
+  .entradaNombre,
+  .entradaCVV,
+  .entradaFecha {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    background-image: none;
+    background-color: green;
+  }
+  footer {
+    min-height: 15vh;
+    justify-content: center;
+    padding-right: 10px;
+  }
+
+  header {
+    height: 8vh;
+  }
+
+  .contenido {
+    padding: 5px;
+    flex-direction: column;
+  }
+
+  button {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .entradaFormulario,
+  .entradaNombre,
+  .entradaCVV,
+  .entradaFecha {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 400px) and (orientation: portrait) {
+  body {
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 400px) and (orientation: landscape) {
+  body {
+    background-color: violet;
+  }
+}

@@ -1,0 +1,32 @@
+@media print {
+  form {
+    width: 100%;
+    border: none;
+    background: none;
+  }
+  body {
+    background: none;
+  }
+  .imagenMugis,
+  .logo {
+    display: none;
+  }
+  footer,
+  header {
+    display: none;
+  }
+  button {
+    display: none;
+  }
+  input::placeholder {
+    color: transparent;
+    opacity: 0;
+  }
+
+  input[type="text"]::placeholder,
+  input[type="number"]::placeholder,
+  input[type="month"]::placeholder {
+    color: transparent;
+    opacity: 0;
+  }
+}

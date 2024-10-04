@@ -19,7 +19,7 @@ $pi = 3.14; // Define la constante de Pi
 
 $numeros = array("valor1" => 1,  "valor2" => 2, "valor3" => 3); // Crea un array asociativo con tres elementos
 
- // Aquí se muestra el saludo completo// Muestra el saludo concatenado sin espacios
+ // Aquí se muestra el saludo completo
 echo "Saludo: " . $saludoCompleto . "<br>";
 
 // Muestra el valor de la variable booleana
