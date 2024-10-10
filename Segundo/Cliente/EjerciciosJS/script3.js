@@ -1,18 +1,33 @@
-var numeroCalculadora1 = parseFloat(prompt("Escribe un número"));
-var numeroCalculadora2 = parseFloat(prompt("Escribe otro número"));
+var numeroCalculadora1; 
+var numeroCalculadora2;
+
+do {
+  numeroCalculadora1 = parseFloat(prompt("Escribe un número"));
+  if (isNaN(numeroCalculadora1) || numeroCalculadora1 === null) {
+    alert("¡Escribe un número válido!");
+  }
+} while (isNaN(numeroCalculadora1) || numeroCalculadora1 === null);
+
+do {
+  numeroCalculadora2 = parseFloat(prompt("Escribe otro número"));
+  if (isNaN(numeroCalculadora2) || numeroCalculadora2 === null) {
+    alert("¡Escribe un número válido!");
+  }
+} while (isNaN(numeroCalculadora2) || numeroCalculadora2 === null);
+
 var booleanBucle = true;
-if (numeroCalculadora1 === ""||numeroCalculadora1 === null ||isNaN(numeroCalculadora1 && numeroCalculadora1 ===)){
-  alert("Escribe un numero válido");
-}
+
 while (booleanBucle) {
   var opcion = parseInt(
     prompt(
       "Panel de opciones: \n1. Sumar\n2. Restar\n3. Multiplicar\n4. Dividir\n5. Volver a introducir los números\n6. Salir del programa"
     )
   );
+  
   switch (opcion) {
     default:
-      alert("escribe un numero del 1-6");
+      alert("Escribe un número del 1-6");
+      break;
     case 1:
       var suma = numeroCalculadora1 + numeroCalculadora2;
       alert("La suma es: " + suma);
@@ -34,8 +49,19 @@ while (booleanBucle) {
       }
       break;
     case 5:
-      numeroCalculadora1 = parseFloat(prompt("Escribe un nuevo número"));
-      numeroCalculadora2 = parseFloat(prompt("Escribe otro nuevo número"));
+      do {
+        numeroCalculadora1 = parseFloat(prompt("Escribe un nuevo número"));
+        if (isNaN(numeroCalculadora1) || numeroCalculadora1 === null) {
+          alert("¡Escribe un número válido!");
+        }
+      } while (isNaN(numeroCalculadora1) || numeroCalculadora1 === null);
+
+      do {
+        numeroCalculadora2 = parseFloat(prompt("Escribe otro nuevo número"));
+        if (isNaN(numeroCalculadora2) || numeroCalculadora2 === null) {
+          alert("¡Escribe un número válido!");
+        }
+      } while (isNaN(numeroCalculadora2) || numeroCalculadora2 === null);
       break;
     case 6:
       alert("Saliendo del programa...");
