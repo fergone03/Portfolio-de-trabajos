@@ -6,11 +6,14 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
+  background-image: url(./src/img/ia.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   justify-content: center;
   align-items: center;
 }
 
-.fernando {
+.firstContainer {
   width: 90%;
   max-width: 1200px;
   height: 100%;
@@ -21,7 +24,7 @@ body {
   align-items: center;
 }
 
-.comodoro {
+.secondContainer {
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -34,7 +37,7 @@ body {
   text-align: center;
 }
 
-.batman {
+.imagenChat {
   width: 50%;
   height: auto;
 }
