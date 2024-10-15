@@ -1,7 +1,13 @@
 var numeroCalculadora1 = parseFloat(prompt("Escribe un número"));
 var numeroCalculadora2 = parseFloat(prompt("Escribe otro número"));
 var booleanBucle = true;
-if (numeroCalculadora1 === ""||numeroCalculadora1 === null ||isNaN(numeroCalculadora1 && numeroCalculadora1 ===)){
+if (
+  numeroCalculadora1 === "" ||
+  numeroCalculadora1 === null ||
+  (isNaN(numeroCalculadora1) && numeroCalculadora2 === "") ||
+  numeroCalculadora2 === null ||
+  isNaN(numeroCalculadora2)
+) {
   alert("Escribe un numero válido");
 }
 while (booleanBucle) {
