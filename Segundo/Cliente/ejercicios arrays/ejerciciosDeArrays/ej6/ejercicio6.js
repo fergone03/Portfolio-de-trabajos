@@ -8,12 +8,12 @@ for (let i = 0; i < 8; i++) {
 }
 
 // Mostrar los elementos ingresados por el usuario en la alerta
-document.getElementById("userWordsList").innerHTML = `<strong>Elementos del array:</strong> ${userWords.join(", ")}`;
+document.getElementById("userWordsList").innerHTML = `<strong>Elementos del array:</strong> ${userWords}`;
 
 let colors = ["red", "green", "blue", "yellow", "pink", "brown", "black", "white"];
 
 // Mostrar los colores posibles para la coincidencia en la alerta
-document.getElementById("colors").innerHTML = `<strong>Colores posibles:</strong> ${colors.join(", ")}`;
+document.getElementById("colors").innerHTML = `<strong>Colores posibles:</strong> ${colors}`;
 
 // Iterar sobre el primer array y encontrar coincidencias
 for (let i = 0; i < userWords.length; i++) {
@@ -23,11 +23,11 @@ for (let i = 0; i < userWords.length; i++) {
 }
 
 // Mostrar los elementos que coinciden en la alerta
-document.getElementById("matchingColors").innerHTML = `<strong>Los elementos que coinciden son:</strong> ${coinciden.join(", ")}`;
+document.getElementById("matchingColors").innerHTML = `<strong>Los elementos que coinciden son:</strong> ${coinciden}`;
 
 // Filtrar los elementos que no coinciden
 userWords = userWords.filter((item) => !coinciden.includes(item));
 
 // Mostrar el array con los elementos coincidentes al principio
 let updatedArray = coinciden.concat(userWords);
-document.getElementById("updatedArray").innerHTML = `<strong>El array con los elementos coincidentes al principio es:</strong> ${updatedArray.join(", ")}`;
+document.getElementById("updatedArray").innerHTML = `<strong>El array con los elementos coincidentes al principio es:</strong> ${updatedArray}`;
