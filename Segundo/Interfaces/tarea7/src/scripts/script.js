@@ -35,20 +35,13 @@ function resetContenido() {
 }
 
 // Selecciona el icono del altavoz y el elemento de audio
+const audio = new Audio('./src/media/sounds/ocean waves sounds 1 minute relaxation _ ocean waves sounds _ ocean sounds _ Calming Sea [ ezmp3.cc ].mp3');
 
-function musica() {
-  const speakerIcon = document.getElementById("speakerIcon");
-  const audioPlayer = document.getElementById("audioPlayer");
-
-  if (audioPlayer.paused) {
-    // Reproducir el audio si está en pausa
-    audioPlayer.play();
-    // Cambiar el ícono de altavoz a uno activado (opcional)
-    speakerIcon.style.opacity = "1"; // Puedes cambiar el estilo si deseas indicar que está activado
+document.getElementById('checkboxInput').addEventListener('change', (event) => {
+  if (event.target.checked) {
+    audio.play();
   } else {
-    // Pausar el audio si está sonando
-    audioPlayer.pause();
-    // Cambiar el ícono de altavoz a uno desactivado (opcional)
-    speakerIcon.style.opacity = "0.5"; // Puedes cambiar el estilo si deseas indicar que está desactivado
+    audio.pause();
+    audio.currentTime = 0;
   }
-}
+});
