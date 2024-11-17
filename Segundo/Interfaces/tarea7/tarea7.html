@@ -6,104 +6,8 @@
     <title>Tarea 7. Imagen, audio y video - Parque Natural</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <style>
-        
-        body {
-            background-color: #e8f5e9;
-            margin-top: 0;
-            padding-top: 0;
-            overflow-x: hidden;
-        }
-        .container {
-            margin-top: 20px;
-        }
-        .audio-controls {
-            margin-bottom: 10px;
-        }
-        .nav-link:hover {
-            cursor: pointer;
-        }
-        /* Estilos para hacer que el nav ocupe toda la zona superior */
-        .navbar {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-        /* Asegurar que el contenido no quede cubierto por el navbar */
-        .content {
-            margin-top: 80px; /* Ajuste dependiendo de la altura del navbar */
-        }
-        #FullPageCarousel {
-            display: none;
-        }
-        #contenidoSonidos {
-            display: none;
-        }
-        .navbar-brand {
-            cursor: pointer;
-        }
-      /* Switch container */
-.toggleSwitch {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #272727;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
-    overflow: hidden;
-  }
-  
-  /* Hide checkbox */
-  #checkboxInput {
-    display: none;
-  }
-  
-  /* Icon styles */
-  .icon {
-    position: absolute;
-    width: 30%;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .mute-speaker {
-    opacity: 1; /* Mute visible by default */
-  }
-  
-  .toggleSwitch svg {
-    width: 18px;
-  }
-  
-  /* Toggle visibility based on checkbox state */
-  #checkboxInput:checked + .toggleSwitch .mute-speaker {
-    opacity: 0;
-  }
-  
-  #checkboxInput:checked + .toggleSwitch .speaker {
-    opacity: 1;
-  }
-  
-  /* Hover and active effects */
-  .toggleSwitch:hover {
-    background-color: #3d3d3d;
-  }
-  
-  #checkboxInput:active + .toggleSwitch {
-    transform: scale(0.7);
-  }
-  
-    </style>
+   <script src="./src/scripts/script.js" defer></script>
+   <link rel="stylesheet" href="./src/styles/styles.css">
 </head>
 <body>
 <div>
@@ -118,17 +22,17 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <!-- Contenedor de los enlaces del navbar -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="toggleContenido()">Galería de Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="toggleContenidoSonidos()">Sonidos de la Naturaleza</a>
-                    </li>
-                </ul>
+            <!-- Icono de altavoz -->
+            <div class="icon speaker" id="speakerIcon" onclick="musica()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75">
+                <path d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z" style="fill:#fff;stroke:#fff;stroke-width:5;stroke-linejoin:round;"></path>
+                <path d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"></path>
+                </svg>
             </div>
+            
+            <!-- Elemento de audio -->
+            <audio id="audioPlayer" src="./src/media/sounds/ocean waves sounds 1 minute relaxation _ ocean waves sounds _ ocean sounds _ Calming Sea [ ezmp3.cc ].mp3"></audio>
+            
     
             <!-- Botón de silenciar todo a la derecha -->
             <input type="checkbox" id="checkboxInput">
@@ -146,7 +50,7 @@
                 </svg>
               </div>
             </label>
-            
+            <audio src="./src/media/sounds/ocean waves sounds 1 minute relaxation _ ocean waves sounds _ ocean sounds _ Calming Sea [ ezmp3.cc ].mp3"></audio>
         </div>
     </nav>
     
@@ -164,23 +68,17 @@
             <aside id="audios" class="col-md-3">
                 <h2 class="text-center">Sonidos de la Naturaleza</h2>
                 <div class="audio-controls text-center">
-                    <audio controls loop>
-                        <source src="rio.mp3" type="audio/mpeg">
-                        Tu navegador no soporta la etiqueta de audio.
+                    <audio controls src="./src/media/sounds/Bird conversation--10 seconds [ ezmp3.cc ].mp3">   
                     </audio>
                     <p>Sonido del río</p>
                 </div>
                 <div class="audio-controls text-center">
-                    <audio controls loop>
-                        <source src="pajaros.mp3" type="audio/mpeg">
-                        Tu navegador no soporta la etiqueta de audio.
+                    <audio controls src="./src/media/sounds/Bird conversation--10 seconds [ ezmp3.cc ].mp3">   
                     </audio>
                     <p>Sonido de los pájaros</p>
                 </div>
                 <div class="audio-controls text-center">
-                    <audio controls loop>
-                        <source src="viento.mp3" type="audio/mpeg">
-                        Tu navegador no soporta la etiqueta de audio.
+                    <audio controls src="./src/media/sounds/Bird conversation--10 seconds [ ezmp3.cc ].mp3">   
                     </audio>
                     <p>Sonido del viento</p>
                 </div>
@@ -204,7 +102,7 @@
                             <video class="img-fluid" autoplay loop muted>
                                 <source src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4">
                             </video>
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption  d-md-block">
                                 <h5>Primer video: Paisaje Tropical</h5>
                                 <p>Disfruta de un hermoso paisaje tropical en movimiento.</p>
                             </div>
@@ -215,7 +113,7 @@
                             <video class="img-fluid" autoplay loop muted>
                                 <source src="https://mdbcdn.b-cdn.net/img/video/forest.mp4" type="video/mp4">
                             </video>
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption  d-md-block">
                                 <h5>Segundo video: Bosque Verde</h5>
                                 <p>Sumérgete en la tranquilidad de un bosque verde.</p>
                             </div>
@@ -226,7 +124,7 @@
                             <video class="img-fluid" autoplay loop muted>
                                 <source src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4" type="video/mp4">
                             </video>
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption  d-md-block">
                                 <h5>Tercer video: Corrientes de Agua</h5>
                                 <p>Relájate viendo las corrientes de agua en la naturaleza.</p>
                             </div>
@@ -370,110 +268,30 @@
 </a>
 </div>
     </div>
-<div class="row" id="contenidoSonidos">
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
-          <!-- Contenido de sonidos -->
-        <div class="audio-controls">
-            <audio controls loop id="audio-rio">
-                <source src="rio.mp3" type="audio/mpeg">
-                Tu navegador no soporta la etiqueta de audio.
+    <div class="container-fluid content" id="contenidoSonidos">
+        <div class="row d-flex justify-content-center align-items-center min-vh-100">
+          <div class="col-md-4 col-sm-6 col-12 audio-controls text-center mb-4">
+            <img src="./src/media/img/png-transparent-birds-birds-birds-natural-bird-thumbnail.png" alt="Viento" class="audio-image img-fluid mt-2" id="image-viento">
+            <audio controls  src="./src/media/sounds/Bird conversation--10 seconds [ ezmp3.cc ].mp3">   
             </audio>
-            <img src="rio.jpg" alt="Río" class="audio-image" id="image-rio" style="display: none;">
+            </audio>
             <p>Sonido del río</p>
-        </div>
-        <div class="audio-controls">
-            <audio controls loop id="audio-pajaros">
-                <source src="pajaros.mp3" type="audio/mpeg">
-                Tu navegador no soporta la etiqueta de audio.
+          </div>
+          <div class="col-md-4 col-sm-6 col-12 audio-controls text-center mb-4">
+            <img src="./src/media/img/png-transparent-birds-birds-birds-natural-bird-thumbnail.png" alt="Viento" class="audio-image img-fluid mt-2 " id="image-viento">
+            <audio controls src="./src/media/sounds/Bird conversation--10 seconds [ ezmp3.cc ].mp3">   
             </audio>
-            <img src="pajaros.jpg" alt="Pájaros" class="audio-image" id="image-pajaros" style="display: none;">
             <p>Sonido de los pájaros</p>
-        </div>
-        <div class="audio-controls">
-            <audio controls loop id="audio-viento">
-                <source src="viento.mp3" type="audio/mpeg">
-                Tu navegador no soporta la etiqueta de audio.
+          </div>
+          <div class="col-md-4 col-sm-6 col-12 audio-controls text-center mb-4">
+            <img src="./src/media/img/png-transparent-birds-birds-birds-natural-bird-thumbnail.png" alt="Viento" class="audio-image img-fluid mt-2 " id="image-viento">
+            <audio controls src="./src/media/sounds/Bird conversation--10 seconds [ ezmp3.cc ].mp3">   
             </audio>
-            <img src="viento.jpg" alt="Viento" class="audio-image" id="image-viento" style="display: none;">
+            <img src="./src/media/img/png-transparent-birds-birds-birds-natural-bird-thumbnail.png" alt="Viento" class="audio-image img-fluid mt-2 " id="image-viento">
             <p>Sonido del viento</p>
+          </div>
         </div>
-
-        </div>
-    </div>
-
-    <!-- JavaScript para Interactividad -->
-    <script>
-        // Botón para silenciar o activar todos los sonidos
-        document.getElementById('muteAll').addEventListener('click', () => {
-            const audios = document.querySelectorAll('audio');
-            audios.forEach(audio => {
-                audio.muted = !audio.muted;
-            });
-            document.getElementById('muteAll').textContent = audios[0].muted ? 'Activar Sonido' : 'Silenciar Todo';
-        });
-
-        // Reproduce un sonido al pasar el cursor por encima de un enlace
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                const hoverSound = new Audio('hover-sound.mp3');
-                hoverSound.play();
-            });
-        });
-        // Función para mostrar/ocultar el contenido principal
-        function toggleContenido() {
-            const contenido = document.getElementById('contenido');
-            const contenidoSonidos = document.getElementById('contenidoSonidos');
-            const fullPageCarousel = document.getElementById('FullPageCarousel');
-
-            // Alternar la visibilidad entre contenido principal y otros
-            fullPageCarousel.style.display = 'block';
-            contenido.style.display = 'none';
-            contenidoSonidos.style.display = 'none';
-        }
-
-
-        // Función para mostrar/ocultar los sonidos de la naturaleza
-        function toggleContenidoSonidos() {
-            const contenido = document.getElementById('contenido');
-            const contenidoSonidos = document.getElementById('contenidoSonidos');
-            const fullPageCarousel = document.getElementById('FullPageCarousel');
-
-            // Alternar la visibilidad entre sonidos y contenido principal
-            contenido.style.display = 'none';
-            fullPageCarousel.style.display = 'none';
-            contenidoSonidos.style.display = 'block';
-        }
-
-        // Función para restablecer el contenido original
-        function resetContenido() {
-            const contenido = document.getElementById('contenido');
-            const contenidoSonidos = document.getElementById('contenidoSonidos');
-            const fullPageCarousel = document.getElementById('FullPageCarousel');
-
-            // Mostrar el contenido principal y ocultar los otros
-            contenido.style.display = 'block';
-            fullPageCarousel.style.display = 'none';
-            contenidoSonidos.style.display = 'none';
-        }
-        // Función para mostrar las imágenes cuando el audio comienza a reproducirse
-        function setupAudioImage(audioId, imageId) {
-            const audio = document.getElementById(audioId);
-            const image = document.getElementById(imageId);
-
-            audio.addEventListener('play', () => {
-                image.style.display = 'block'; // Muestra la imagen cuando el audio comienza
-            });
-
-            audio.addEventListener('ended', () => {
-                image.style.display = 'none'; // Oculta la imagen cuando el audio termina
-            });
-        }
-
-        // Configuración de los audios
-        setupAudioImage('audio-rio', 'image-rio');
-        setupAudioImage('audio-pajaros', 'image-pajaros');
-        setupAudioImage('audio-viento', 'image-viento');
-
-    </script>
+      </div>
+      
 </body>
 </html>
