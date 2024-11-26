@@ -1,0 +1,144 @@
+// Ejercicio 1: Variables
+$color-principal: #333;
+$color-secundario: #555;
+$color-fondo: #f4f4f4;
+$color-enlaces: #007bff;
+$fuente-principal: 'Arial', sans-serif;
+$fuente-secundaria: 'Verdana', sans-serif;
+$margen-base: 20px;
+$font-size-h1: 2em;
+$font-size-h2: 1.5em;
+$font-size-h3: 1.2em;
+
+// Ejercicio 2: Anidación
+header {
+  background-color: $color-principal;
+  color: white;
+  padding: $margen-base;
+
+  h1 {
+    font-size: $font-size-h1;
+  }
+
+  nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: $margen-base;
+
+        a {
+          color: $color-enlaces;
+          text-decoration: none;
+          font-size: 1.2em;
+
+          &:hover {
+            color: darken($color-enlaces, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  background-color: $color-fondo;
+  padding: $margen-base;
+
+  section {
+    margin-bottom: $margen-base;
+
+    h2 {
+      font-size: $font-size-h2;
+      color: $color-principal;
+    }
+  }
+
+  #servicios {
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: $margen-base;
+      margin: $margen-base;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      h3 {
+        font-size: $font-size-h3;
+        color: $color-secundario;
+      }
+    }
+  }
+}
+
+// Ejercicio 3: Mixins
+@mixin boton-estilo($color, $padding: 10px 20px) {
+  background-color: $color;
+  color: white;
+  padding: $padding;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+}
+
+button {
+  @include boton-estilo($color-principal);
+}
+
+footer {
+  button {
+    @include boton-estilo($color-secundario);
+  }
+}
+
+// Ejercicio 4: Operadores
+h1 {
+  font-size: $font-size-h2 * 2; // El tamaño de h1 es el doble de h2
+}
+
+h2 {
+  font-size: $font-size-h3 * 2; // El tamaño de h2 es el doble de h3
+}
+
+// Ejercicio 5: Funciones
+@function mezcla-colores($color1, $color2, $peso: 50%) {
+  @return mix($color1, $color2, $peso);
+}
+
+h1 {
+  color: mezcla-colores($color-principal, $color-secundario, 70%); // Mezclando colores con 70% de $color-principal
+}
+
+// Funcionalidad adicional: Media Queries
+@mixin media-query($size) {
+  @if $size == 'small' {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @else if $size == 'medium' {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+@include media-query('small') {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+}
