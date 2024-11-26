@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min (1).css">
+    <script src="../js/ejercicio7.js" defer></script>
+    <title>Ejercicio 7</title>
+    <link rel="icon" type="image/x-icon" href="../image/teacherIcon.ico">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">Ejercicio 7</a>
+            <a class="navbar-brand d-flex text-end">Alejandro Castillo Ramos//Esteban Fernández González</a>
+        </div>
+    </nav>
+    
+    <div class="container-fluid mt-4">
+        <div class="row d-flex justify-content-center">
+            <!-- Datos del Alumno -->
+            <div class="col-8 rounded-2" style="background-color: #78C2AD;">
+                <h1 class="text-center" style="color:white">Datos del Alumno</h1>
+                <div class="row mt-4" style="color:black">
+                    <div class="col-6 text-center"  id="alumnoNombre">Nombre:</div>
+                    <div class="col-6 text-center" id="alumnoEdad">Edad:</div>
+                    <div class="col-12 text-center" id="alumnoCiclo">Ciclo:</div>
+                    <div class="col-12 text-center" id="alumnoCurso">Curso:</div>
+                    <div id="asignaturasContainer" class="col-12">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Datos del Tutor -->
+            <div class="col-8 rounded-2 mt-4" style="background-color: #78C2AD;">
+                <h1 class="text-center" style="color:white">Tutor</h1>
+                <div class="row mt-4">
+                    <div class="col-6 text-center"><button id="boton1tutor">Mostrar Tutor</button></div>
+                    <div class="col-6 d-flex justify-content-center" id="boton2Tutor"><button>Cambiar nombre</button></div>
+                    <div class="col-12 text-center"><h2 id="resultadoTutor" style="color: rgb(3, 3, 3);"></h2></div>
+                    <div class="col-12 text-center"><h2 id="cambioNombreTutor" style="color: rgb(3, 3, 3);"></h2></div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
